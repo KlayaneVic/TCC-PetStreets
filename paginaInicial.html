@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Login de Usuário</title>
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilo.css" /> 
+    	<script src="js/jquery-3.3.1.min.js"></script> 
+    	<script src="js/popper.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- Barras de Navegação -->
+		<nav class="nav1">
+			<img src="img/logo.png" class="logo">
+			<a href="sobreNos2.html">| Sobre Nós</a>
+			<a href="sobreOsite2.html">| Sobre o Site</a>
+			<a href="instrucoes2.html">| Instruções</a>
+			<a href="adocoesDeSucesso2.html">| Adoções de Sucesso </a>
+			<select name="perfil" class="select" onchange="location = this.value;">
+				<option selected hidden >Perfil</option>
+				<option value="paginaInicial.html">Pagina Inicial</option>
+				<option value="perfil_usuario.html">Usuário</option>
+				<option value="cadastro_animais.html">Cadastro de Animais</option>
+				<option value="lista_animais.html">Sua Lista de Cadastrados</option>
+				<option value="pesquisa_animais.html">Pesquisa</option>
+				<option value="sobreOsite.html">Sair</option>
+			</select>
+		</nav>
+		<nav class="nav2">
+			<h5>Ultimos Adicionados...</h5>
+		</nav>
+		
+		<!-- Cards -->
+		<div class="card-group">
+		  <div class="card" width="15px" height="30px" align="center">
+			<img class="card-img-top" src="img/cachorro.jpg" height="350px" alt="Imagem de capa do card">
+			<div class="card-body">
+			  <h5 class="card-title">Estopinha, São Rafael</h5>
+			  <p class="card-text">Raça Indefinida <br> 
+								   5 anos <br>
+								   Temperamento Dócil
+								   
+			  </p>			   
+			</div>
+			<div class="card-footer">
+			  <small class="text-muted"><h4><a href="./paginaInicial.html" class="btn btn-primary" data-toggle="modal" 
+			  data-target="#modalExemplo">QUERO ADOTAR!!</a></h4></small>
+			</div>
+		  </div>
+		  <div class="card" width="15px" height="15px" align="center">
+			<img class="card-img-top" src="img/cachorro2.jpg" height="350px" alt="Imagem de capa do card">
+			<div class="card-body">
+			  <h5 class="card-title">Bisnaguinha, Parque São Paulo</h5>
+			  <p class="card-text">Raça Indefinida <br> 
+								   2 anos <br>
+								   Temperamento Dócil</p>
+			</div>
+			<div class="card-footer">
+			  <small class="text-muted"><h4><a href="./paginaInicial.html" class="btn btn-primary" data-toggle="modal" 
+			  data-target="#modalExemplo">QUERO ADOTAR!!</a></h4></small>
+			</div>
+		  </div>
+		  <div class="card" width="15px" height="30px" align="center">
+			<img class="card-img-top" src="img/gato.png" height="350px" alt="Imagem de capa do card">
+			<div class="card-body">
+			  <h5 class="card-title">Flocos, Indaia</h5>
+			  <p class="card-text">Raça Indefinida <br> 
+								   6 anos<br>
+								   Temperamento Apático</p></p>
+			</div>
+			<div class="card-footer">
+			  <small class="text-muted"><h4><a href="./paginaInicial.html" class="btn btn-primary" data-toggle="modal" 
+			  data-target="#modalExemplo">QUERO ADOTAR!!</a></h4></small>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Olá, Notamos que se <br> Interessou por este Peludo!</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				Antes de qualquer passo precisamos da sua cooperação, indicamos que visite nossa 
+				pagina informativa na aba 'INSTRUÇÕES' para saber os requisitos da adoção animal. <br><br>
+				Pessoa que Publicou: Exemplo de Nome <br>
+				Contato: (99)99999-9999 <br>
+				Cidade: Araraquara <br>
+				Bairro: Exemplo de Bairro <br>
+				Breve Descrição do Animal: Dócil, Tem todas as Vacinas em dia, <br> Gosta de Brinquedos de Borracha.
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Entendi!</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>

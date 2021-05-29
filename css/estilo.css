@@ -1,0 +1,143 @@
+.botao{
+	float:right;
+	margin-top: 2em;
+	border-style: none;
+	border-radius: 15px;
+}
+
+.select{
+	float:right;
+	margin-top: 2em;
+	border-radius: 15px;
+}
+
+.formCadastro {
+	float:center;
+	margin-left: 22em;
+	padding: 2em 2em 0em 2em;
+	border-style: none;
+	border-radius: 15px;
+	background-color: Gainsboro;
+	width: 40em; 
+	height: 30em;
+}
+
+.formCadastroAnimal {
+	float:center;
+	margin-left: 22em;
+	padding: 2em 2em 0em 2em;
+	border-style: none;
+	border-radius: 15px;
+	background-color: Gainsboro;
+	width: 40em; 
+	height: 33em;
+}
+
+.formLogin {
+	float:center;
+	margin-left: 22em;
+	margin-top: 2em;
+	padding: 4em 0em 0em 0em;
+	border-style: none;
+	border-radius: 15px;
+	background-color: Gainsboro;
+	width: 40em; 
+	height: 20em;
+}
+
+#cadastro{
+	margin-right: 3em;
+}
+#login{
+	margin-right: 1em;
+}
+
+.logo{
+	width: 200px;
+	height: 100px;
+}
+
+.nav1{
+	background-color: white; 
+	padding: auto; 
+	margin: auto;
+}
+
+.nav2{
+	background-color: lightgray; 
+	padding: 1em; 
+	margin: auto;
+}
+
+.nav3{
+	text-align: center;
+}
+
+.tabelaAnimal{
+	margin-top: 40px;
+	height: 20px; 
+}
+
+.usuarioFoto{
+	margin-top: 55px;
+	width: 190px;
+
+}
+
+.h4{
+ text-align: center;
+ font-weight: bolder;
+ margin: 20px;
+}
+
+.border{
+	margin-top: 38px;
+	height: 43px;
+	font-weight: bolder;
+	border-radius: 15px;
+	border: 10px solid black;
+	text-align: justify;
+}
+.botao2{
+	float:right;
+	margin: 0px;
+	border-style:solid;
+	padding: 2px;
+	border-radius: 20px;
+
+}
+.gato{
+	width: 300px;
+	height: 200px;
+	
+}
+
+.conteiner img{
+	max-width: 200px;
+}
+
+.col{
+	border: 1px solid; 
+	margin-right: 2em; 
+	border-radius: 10px; 
+	text-align: center; 
+	height: 27em; 
+	padding: 5px; 
+	margin-top: 5px;
+}
+
+.animais{
+	width: 200px;
+	height: 300px;
+}
+.tabela{
+	margin: auto;
+	text-align: center;
+	height: 200px;
+	width: 1000px;
+	border-radius: 20px;
+}
+.linha1{
+	background-color: grey;
+	color: white;
+}
