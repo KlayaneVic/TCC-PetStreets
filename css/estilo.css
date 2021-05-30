@@ -3,46 +3,13 @@
 	margin-top: 2em;
 	border-style: none;
 	border-radius: 15px;
+	color: yellow;
 }
 
 .select{
 	float:right;
 	margin-top: 2em;
 	border-radius: 15px;
-}
-
-.formCadastro {
-	float:center;
-	margin-left: 22em;
-	padding: 2em 2em 0em 2em;
-	border-style: none;
-	border-radius: 15px;
-	background-color: Gainsboro;
-	width: 40em; 
-	height: 30em;
-}
-
-.formCadastroAnimal {
-	float:center;
-	margin-left: 22em;
-	padding: 2em 2em 0em 2em;
-	border-style: none;
-	border-radius: 15px;
-	background-color: Gainsboro;
-	width: 40em; 
-	height: 33em;
-}
-
-.formLogin {
-	float:center;
-	margin-left: 22em;
-	margin-top: 2em;
-	padding: 4em 0em 0em 0em;
-	border-style: none;
-	border-radius: 15px;
-	background-color: Gainsboro;
-	width: 40em; 
-	height: 20em;
 }
 
 #cadastro{
@@ -63,25 +30,14 @@
 	margin: auto;
 }
 
-.nav2{
-	background-color: lightgray; 
+.nav2 {
+	background-color: purple; 
 	padding: 1em; 
 	margin: auto;
 }
 
 .nav3{
 	text-align: center;
-}
-
-.tabelaAnimal{
-	margin-top: 40px;
-	height: 20px; 
-}
-
-.usuarioFoto{
-	margin-top: 55px;
-	width: 190px;
-
 }
 
 .h4{
@@ -106,11 +62,6 @@
 	border-radius: 20px;
 
 }
-.gato{
-	width: 300px;
-	height: 200px;
-	
-}
 
 .conteiner img{
 	max-width: 200px;
@@ -126,17 +77,6 @@
 	margin-top: 5px;
 }
 
-.animais{
-	width: 200px;
-	height: 300px;
-}
-.tabela{
-	margin: auto;
-	text-align: center;
-	height: 200px;
-	width: 1000px;
-	border-radius: 20px;
-}
 .linha1{
 	background-color: grey;
 	color: white;
