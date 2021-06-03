@@ -45,19 +45,59 @@
 		</p>
 		<h5 style="margin-left: 2em;">Algumas Reflexões antes da adoção:</h5><br/>
 		
-		<div align="center">
-			<h3>1</h3>
-				<p>Você terá mesmo o tempo necessário para cuidar?</p>
-			<h3>2</h3>
-				<p>O lugar é adequado e seguro?</p>
-			<h3>3</h3>
-				<p>As suas condições financeiras coincidem para o bom cuidado?</p>
-			<h3>4</h3>
-				<p>Você é maior de Idade? Caso não seja o correto é conversar com seus pais, pois eles saberão o que fazer</p>
-			<h3>5</h3>
-				<p>Não desconsidere estas reflexões, elas são importantes para que haja uma adoção segura e plena.</p>
-			<br/>
-		</div>
+		<div style="background-color: lightgray; width: 50em; height: 25em; margin-left: 17em; border-radius: 40em;">
+		   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+			  </ol>
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <img class="d-block w-100" src="img/1.png" alt="Primeiro Slide" style="width: 50em; height: 25em; border-radius: 40em;">
+				  <div class="carousel-caption d-none d-md-block">
+						<h5>Você terá mesmo o tempo necessário para cuidar?</h5>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/4.png" alt="Segundo Slide" style="width: 50em; height: 25em; border-radius: 40em;">
+				  <div class="carousel-caption d-none d-md-block">
+						<h5>O lugar é adequado e seguro?</h5>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/2.png" alt="Terceiro Slide" style="width: 50em; height: 25em; border-radius: 40em;">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>As suas condições financeiras coincidem para o bom cuidado?</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/3.png" alt="Terceiro Slide" style="width: 50em; height: 25em; border-radius: 40em;">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Você é maior de Idade?</h5>
+						<p>Caso não seja o correto é conversar com seus pais, pois eles saberão o que fazer</p>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/5.png" alt="Terceiro Slide" style="width: 50em; height: 25em; border-radius: 40em;">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Não desconsidere estas reflexões!!</h5>
+						<p>Elas são importantes para que haja uma adoção segura e plena.</p>
+				  </div>
+				</div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Próximo</span>
+			  </a>
+			</div>
+		</div><br>
 		<?php
 			include ('rodape.inc');
 		?>
