@@ -99,7 +99,7 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Obrigado (a) pela Atenção!! <span class="text-muted">Prossiga para o Login ou se quiser saber mais, consulte nossas paginas informativas!</span></h2>
+            <h2 class="featurette-heading">Obrigado (a) pela Atenção!! <span class="text-muted">Prossiga para o Login ou Cadastro e se quiser saber mais, consulte nossas paginas informativas!</span></h2>
             <p class="lead" align="justify"><i>No topo da pagina estão descritos tudo o que você vai precisar: HOME (Página Atual), Sobre Nós (informações dos Desenvolvedores), Sobre o Site (Página caso queira saber um pouco mais sobre a criação do site), Instruções (Caso não saiba por onde começar), Adoções de Sucesso (Para ver animais adotados com sucesso na plataforna) e claro, os botões de cadastro e login.
 			</i></p>
           </div>
