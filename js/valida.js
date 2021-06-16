@@ -1,48 +1,3 @@
-function validaForm() {
-
-    document.getElementById("erroNome").innerHTML = "";
-    document.getElementById("erroEmail").innerHTML = "";
-    document.getElementById("erroContato").innerHTML = "";
-    document.getElementById("erroBairro").innerHTML = "";
-	document.getElementById("erroCidade").innerHTML = "";
-    document.getElementById("erroSenha").innerHTML = "";
-    document.getElementById("erroRaca").innerHTML = "";
-    document.getElementById("erroCor").innerHTML = "";
-	document.getElementById("erroPorte").innerHTML = "";
-    document.getElementById("erroIdade").innerHTML = "";
-    
-    if (!validaEmail()) {
-        return false;
-    }
-	if (!validaBairro()) {
-        return false;
-    }
-    if (!validaNome()) {
-        return false;
-    }
-    if (!validaCidade()) {
-        return false;
-    }
-    if (!validaSenha()) {
-        return false;
-    }
-    if (!validaContato()) {
-        return false;
-    }
-    if (!validaRaca()) {
-        return false;
-    }
-    if (!validaCor()) {
-        return false;
-    }
-    if (!validaPorte()) {
-        return false;
-    }
-    if (!validaIdade()) {
-        return false;
-    }
-    return true;
-}
 function validaEmail() {
     var email = document.getElementById("email_usuario");
     if (email.value == "") {
@@ -53,6 +8,20 @@ function validaEmail() {
     }else{
         email.style.background = "none";
         document.getElementById("erroEmail").innerHTML = "";
+    }
+    return true;
+}
+
+function validaEmailAtt() {
+    var email = document.getElementById("novo_email_usuario");
+    if (email.value == "") {
+        email.style.background = "yellow";
+        document.getElementById("erroEmailAtt").innerHTML = 
+        "E-mail é obrigatório!";
+        return false;
+    }else{
+        email.style.background = "none";
+        document.getElementById("erroEmailAtt").innerHTML = "";
     }
     return true;
 }
@@ -71,6 +40,20 @@ function validaBairro() {
     return true;
 }
 
+function validaBairroAtt() {
+    var bairro = document.getElementById("novo_bairro_usuario");
+    if (bairro.value == "") {
+        bairro.style.background = "yellow";
+        document.getElementById("erroBairroAtt").innerHTML = 
+        "Bairro é obrigatório!";
+        return false;
+    }else{
+        bairro.style.background = "none";
+        document.getElementById("erroBairroAtt").innerHTML = "";
+    }
+    return true;
+}
+
 function validaSenha() {
     var senha = document.getElementById("senha_usuario");
     if (senha.value == "") {
@@ -81,6 +64,20 @@ function validaSenha() {
     }else{
         senha.style.background = "none";
         document.getElementById("erroSenha").innerHTML = "";
+    }
+    return true;
+}
+
+function validaSenhaAtt() {
+    var senha = document.getElementById("nova_senha_usuario");
+    if (senha.value == "") {
+        senha.style.background = "yellow";
+        document.getElementById("erroSenhaAtt").innerHTML = 
+        "Senha é obrigatório!";
+        return false;
+    }else{
+        senha.style.background = "none";
+        document.getElementById("erroSenhaAtt").innerHTML = "";
     }
     return true;
 }
@@ -99,6 +96,20 @@ function validaNome() {
     return true;
 }
 
+function validaNomeAtt() {
+    var nome = document.getElementById("novo_nome");
+    if (nome.value == "") {
+        nome.style.background = "yellow";
+        document.getElementById("erroNomeAtt").innerHTML = 
+        "Nome é obrigatório!";
+        return false;
+    }else{
+        nome.style.background = "none";
+        document.getElementById("erroNomeAtt").innerHTML = "";
+    }
+    return true;
+}
+
 function validaCidade() {
     var cidade = document.getElementById("cidade_usuario");
     if (cidade.value == "") {
@@ -113,17 +124,46 @@ function validaCidade() {
     return true;
 }
 
-function validaContato(){
-    var con = document.getElementById("contato_usuario");
-    var conExpr = /^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$/
-    if(!conExpr.test(con.value)){
-        con.style.background = "yellow";
-        document.getElementById("erroContato").innerHTML =
-        "Contato em formato invalido! Tente novamente no formato (XX) 9XXXX-XXXX !!";
+function validaCidadeAtt() {
+    var cidade = document.getElementById("nova_cidade_usuario");
+    if (cidade.value == "") {
+        cidade.style.background = "yellow";
+        document.getElementById("erroCidadeAtt").innerHTML = 
+        "Cidade é obrigatório!";
         return false;
     }else{
-        con.style.background = "none";
-        document.getElementById("erroContato").innerHTML = "";
+        cidade.style.background = "none";
+        document.getElementById("erroCidadeAtt").innerHTML = "";
+    }
+    return true;
+}
+
+function validaTelefone(){
+    var tel = document.getElementById("telefone_usuario");
+    var telExpr = /^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$/
+    if(!telExpr.test(tel.value)){
+        tel.style.background = "yellow";
+        document.getElementById("erroTelefone").innerHTML =
+        "Telefone em formato invalido! Tente no formato (XX) 9XXXX-XXXX !!";
+        return false;
+    }else{
+        tel.style.background = "none";
+        document.getElementById("erroTelefone").innerHTML = "";
+    }
+    return true;
+}
+
+function validaTelefoneAtt(){
+    var tel = document.getElementById("novo_telefone_usuario");
+    var telExpr = /^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$/
+    if(!telExpr.test(tel.value)){
+        tel.style.background = "yellow";
+        document.getElementById("erroTelefoneAtt").innerHTML =
+        "Formato invalido! Tente no formato (XX) 9XXXX-XXXX !!";
+        return false;
+    }else{
+        tel.style.background = "none";
+        document.getElementById("erroTelefoneAtt").innerHTML = "";
     }
     return true;
 }

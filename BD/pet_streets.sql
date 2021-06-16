@@ -1,9 +1,10 @@
-create database banco_de_dados;
-use banco_de_dados;
+create database pet_streets;
+use pet_streets;
 
 create table usuario
 (
-	email varchar(80) not null,
+	id_usuario int not null auto_increment,
+	email varchar(80) not null unique,
     senha varchar(80) not null,
     nome varchar(80),
     foto text(100),
@@ -12,7 +13,7 @@ create table usuario
     bairro varchar(80),
     cidade varchar(80),
     telefone varchar(80),
-    primary key(email)
+    primary key(id_usuario)
 )engine=innoDB;
 
 create table animal

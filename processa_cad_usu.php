@@ -45,6 +45,12 @@
 						$telefone_usuario = $_POST['telefone_usuario'];
 						$tipo_usuario = $_POST['tipo_usuario'];
 						
+							if($tipo_usuario == 1){
+								$tipo_usuario = 'Usuário Comum';
+							}else{
+								$tipo_usuario = 'Usuário Comum ONG';
+							}
+						
 
 						 //Abrindo conexão com o BD
 						 include('cabecalho_conexao.php');

@@ -25,31 +25,31 @@
 		</nav>
 		<br/>
 			<div class="container">
-				<form action="processa_cad_usu.php" method="POST" align="center" class="formCadastro" onsubmit="return validaForm()" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
+				<form action="processa_cad_usu.php" method="POST" align="center" class="formCadastro" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
 					<h5>Cadastre-se Agora e Faça a Diferença!! </h5><br>
 					<p>
 						<label>Nome Completo:</label>
-						<input type="text" id="nome_usuario" name="nome_usuario" onchange="validaNome()" required />
+						<input type="text" id="nome_usuario" name="nome_usuario" onfocusout="validaNome()" required />
 						<br><span id="erroNome" style="color: red;"></span>
 					</p>
 					<p>
 						<label>Telefone:</label>
-						<input type="text" id="telefone_usuario" name="telefone_usuario" onchange="validaTelefone()" required />
+						<input type="text" id="telefone_usuario" name="telefone_usuario" onfocusout="validaTelefone()" required />
 						<br><span id="erroTelefone" style="color: red;"></span>
 					</p>
 					<p>
 						<label>Cidade:</label>
-						<input type="text" id="cidade_usuario" name="cidade_usuario" onchange="validaCidade()" required />
+						<input type="text" id="cidade_usuario" name="cidade_usuario" onfocusout="validaCidade()" required />
 						<br><span id="erroCidade" style="color: red;"></span>
 					</p>
 					<p>
 						<label>Bairro:</label>
-						<input type="text" id="bairro_usuario" name="bairro_usuario" onchange="validaBairro()" required />
+						<input type="text" id="bairro_usuario" name="bairro_usuario" onfocusout="validaBairro()" required />
 						<br><span id="erroBairro" style="color: red;"></span>
 					</p>
 					<p>
 						<label>E-mail:</label>
-						<input type="text" id="email_usuario" name="email_usuario" onchange="validaEmail()" required />
+						<input type="text" id="email_usuario" name="email_usuario" onfocusout="validaEmail()" required />
 						<br><span id="erroEmail" style="color: red;"></span>
 					</p>
 					<p>
@@ -61,7 +61,7 @@
 					</p>
 					<p>
 						<label>Senha:</label> 
-						<input type="text" id="senha_usuario" name="senha_usuario" onchange="validaSenha()" required />
+						<input type="text" id="senha_usuario" name="senha_usuario" onfocusout="validaSenha()" required />
 						<br><span id="erroSenha" style="color: red;"></span>
 					</p>
 					<p>
