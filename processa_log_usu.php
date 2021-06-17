@@ -18,14 +18,18 @@
                     while (($resultado = mysqli_fetch_assoc($dados_recuperados)) != null) {
 							
 							if ($resultado['senha'] == $senha) {
+								
 								$id_usuario = $resultado['id_usuario'];
+								$identificador_usu = $resultado['adm']; 
 								
                                 if ($resultado['adm'] == 1) {
 									header("Location:home_adm.php"); 
 								}else {
 									header("Location:perfil_usuario.php"); 
 								}
+								
                             }else {
+								
                                 echo ("<script language='JavaScript'>
 									window.alert('ERRO: Senha Incorreta')
 									window.location.href='login_usuario.php';
@@ -41,6 +45,7 @@
                 }    
 				
 			$_SESSION["id_usuario"] = $id_usuario;
+			$_SESSION["identificador_usu"] = $identificador_usu;
     ?>
     </body>
 </html>

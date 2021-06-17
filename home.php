@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -16,9 +19,20 @@
 		</style>
 	</head>
 	<body>
+	
+	<!-- Barra de Navegação -->
 		<?php
-			include('barra_navegacao1.inc');
+			if(empty($_SESSION)){
+				include ('barra_navegacao1.inc');
+			}else{
+				if($_SESSION["identificador_usu"] == 0){
+					include ('barra_navegacao2.inc');
+				}else{
+					include ('barra_navegacao3.inc');
+				}
+			}
 		?>
+		
 	<main role="main">
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
