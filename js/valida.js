@@ -168,58 +168,98 @@ function validaTelefoneAtt(){
     return true;
 }
 
-function validaRaca() {
-    var raca = document.getElementById("raca_animal");
-    if (raca.value == "") {
-        raca.style.background = "yellow";
-        document.getElementById("erroRaca").innerHTML = 
-        "Raça é obrigatório!";
+//valida animal
+function validaNomeAnimal() {
+    var nome_animal = document.getElementById("nome_animal");
+    if (nome_animal.value == "") {
+        nome_animal.style.background = "yellow";
+        document.getElementById("erroNomeA").innerHTML = 
+        "Nome é obrigatório!";
         return false;
     }else{
-        raca.style.background = "none";
-        document.getElementById("erroRaca").innerHTML = "";
+        nome_animal.style.background = "none";
+        document.getElementById("erroNomeA").innerHTML = "";
     }
     return true;
 }
 
-function validaCor() {
-    var cor = document.getElementById("cor_animal");
+function validaEspecieAnimal() {
+    var especie = document.getElementById("especie");
+    if (especie.value == "") {
+        especie.style.background = "yellow";
+        document.getElementById("erroEspecieA").innerHTML = 
+        "A espécie é obrigatória!";
+        return false;
+    }else{
+        especie.style.background = "none";
+        document.getElementById("erroEspecieA").innerHTML = "";
+    }
+    return true;
+}
+
+function validaRacaAnimal() {
+    var raca = document.getElementById("raca");
+    if (raca.value == "") {
+        raca.style.background = "yellow";
+        document.getElementById("erroRacaA").innerHTML = 
+        "Raça obrigatória!";
+        return false;
+    }else{
+        raca.style.background = "none";
+        document.getElementById("erroRacaA").innerHTML = "";
+    }
+    return true;
+}
+
+function validaCorAnimal() {
+    var cor = document.getElementById("cor");
     if (cor.value == "") {
         cor.style.background = "yellow";
-        document.getElementById("erroCor").innerHTML = 
+        document.getElementById("erroCorA").innerHTML = 
         "Cor é obrigatório!";
         return false;
     }else{
         cor.style.background = "none";
-        document.getElementById("erroCor").innerHTML = "";
+        document.getElementById("erroCorA").innerHTML = "";
     }
     return true;
 }
 
-function validaPorte() {
-    var porte = document.getElementById("porte_animal");
+function validaPorteAnimal() {
+	
+    var porte = document.getElementById("porte");
     if (porte.value == "") {
         porte.style.background = "yellow";
-        document.getElementById("erroPorte").innerHTML = 
+        document.getElementById("erroPorteA").innerHTML = 
         "Porte é obrigatório!";
         return false;
     }else{
         porte.style.background = "none";
-        document.getElementById("erroPorte").innerHTML = "";
+        document.getElementById("erroPorteA").innerHTML = "";
     }
     return true;
 }
 
-function validaIdade() {
+function validaIdadeAnimal() {
     var idade = document.getElementById("idade_animal");
     if (idade.value == "") {
         idade.style.background = "yellow";
-        document.getElementById("erroIdade").innerHTML = 
+        document.getElementById("erroIdadeA").innerHTML = 
         "Idade é obrigatório!";
         return false;
     }else{
         idade.style.background = "none";
-        document.getElementById("erroIdade").innerHTML = "";
+        document.getElementById("erroIdadeA").innerHTML = "";
     }
     return true;
+}
+
+function permissao_excluir_animal(){
+    var confirmacao = confirm("Tem certeza que deseja excluir?");
+    if(!confirmacao){
+        window.location.href ="lista_animais.php";
+        return false;
+    }else{
+        return confirmacao;
+    }
 }

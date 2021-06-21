@@ -79,7 +79,7 @@
                         
                         <div class="col-md-7" style="border-radius: 3em; height: 20em; padding: 50px; margin-top: 50px; background-color: white;">    
                             <p><h5><b>Nome Completo: '.$resultado["nome"].' ('.$resultado["tipo"].')</b></h5></p>
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">Editar</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#modalEditarUsu">Editar</button>
                             </p>
                             <p><h5><b>Telefone:'.$resultado["telefone"].'</b></h5></p>
                             <p><h5><b>Cidade: '.$resultado["cidade"].', Bairro: '.$resultado["bairro"].'</b></h5></p>
@@ -100,7 +100,7 @@
         ?>
 
         <!-- Modal Editar -->
-        <div class="modal" id="modalEditar" tabindex="-1" role="dialog">
+        <div class="modal" id="modalEditarUsu" tabindex="-1" role="dialog">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -117,7 +117,7 @@
 									<span id="erroNomeAtt" style="color: red;"></span>
 								</p>
 								<p>
-									Telefone: <input type="text" id="novo_telefone_usuario" name="novo_telefone_usuario" onfocusout="validaTelefoneAtt()" required value="<?php echo $resultado['telefone']; ?>" />
+									Telefone: <input type="text" id="novo_telefone_usuario" name="novo_telefone_usuario" onfocusout="validaTelefoneAtt()" value="<?php echo $resultado['telefone']; ?>" required />
 									<span id="erroTelefoneAtt" style="color: red;"></span>
 								</p>
 								<p>
