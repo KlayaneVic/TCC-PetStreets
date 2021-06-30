@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$_SESSION['i'] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,6 +14,7 @@
     	<script src="js/popper.min.js"></script>
     	<script src="js/bootstrap.min.js"></script>
 		<script src="js/valida.js"></script>
+		<script src="js/arquivo_externo.js"></script>
 	
 		<style>
 			body{
@@ -30,7 +32,7 @@
 		</nav>
 		<br/>
 		<div class="conteiner">
-			<form action="processa_cad_ani.php" method="POST" align="center" class="formCadastro" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
+			<form action="processa_exemplo.php" id="tabela_animal" method="POST" align="center" class="formCadastro" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
 				<h5>Cadastre seu animalzinho agora e ajude-o!! </h5><br/>
 				<p>
 					<label>Nome: </label>
@@ -78,11 +80,70 @@
 					<input type="file" name="foto_animal" required /></br>
 				</p>
 				
+				<p>
+					<label style="display: none" id="label">Tratamentos:</label>
+					<div id="tratamento_input"></div></br>
+				</p>
+				
+				<button class="btn btn-primary" data-toggle="modal" data-target="#modalAdicionarTratamento">Adicionar Tratamento</button><br>
+				
 				<input type="submit" value="Confirmar" />
 			</form>
 		</div>
+		
 		<?php
 			include ('rodape.inc');
 		?>
+		
+		 <!-- Modal Adicionar -->
+        <div class="modal" id="modalAdicionarTratamento" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Adicionar Tratamento</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+						<div class="row">
+								<p>
+									Data Tratamento: 
+									<input type="text" id="data_tratamento" name="data_tratamento" required />
+								</p>
+								<p>
+									Observações:
+									<textarea id="observacao_tratamento" name="observacao_tratamento" required></textarea>
+								</p>
+								<select id="tratamento" name="tratamento">
+									<option value="" selected="selected">Selecione o Tratamento</option>
+									<?php
+										include("cabecalho_conexao.php");
+										$SQL = "SELECT * FROM tipo_tratamento";
+										$dados_recuperados = mysqli_query($con, $SQL);
+										if(mysqli_num_rows($dados_recuperados) > 0){
+										
+											while (($resultado = mysqli_fetch_assoc($dados_recuperados)) != null) {
+
+												$nome = $resultado['nome'];
+												$id = $resultado['id'];
+												$categoria = $resultado['categoria'];
+												echo "<option value='$id'>$categoria - $nome</option>";
+											}
+										}else {
+											echo "Nao possui Tratamento. <br>";
+										}
+
+										include("rodape_conexao.php");
+									?>
+									
+									</select>
+									
+									 <button type="submit" class="btn btn-primary" id="adicionar">+ Adicionar</button>
+												
+							</div>
+					</div>
+            </div>
+        </div> 
 	</body>
 </html>

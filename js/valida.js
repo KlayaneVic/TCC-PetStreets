@@ -183,6 +183,20 @@ function validaNomeAnimal() {
     return true;
 }
 
+function validaNomeAnimalAtt() {
+    var nome_animal = document.getElementById("novo_nome_animal");
+    if (nome_animal.value == "") {
+        nome_animal.style.background = "yellow";
+        document.getElementById("erroNomeAnimal").innerHTML = 
+        "Nome é obrigatório!";
+        return false;
+    }else{
+        nome_animal.style.background = "none";
+        document.getElementById("erroNomeAnimal").innerHTML = "";
+    }
+    return true;
+}
+
 function validaEspecieAnimal() {
     var especie = document.getElementById("especie");
     if (especie.value == "") {
@@ -193,6 +207,20 @@ function validaEspecieAnimal() {
     }else{
         especie.style.background = "none";
         document.getElementById("erroEspecieA").innerHTML = "";
+    }
+    return true;
+}
+
+function validaEspecieAnimalAtt() {
+    var especie = document.getElementById("nova_especie_animal");
+    if (especie.value == "") {
+        especie.style.background = "yellow";
+        document.getElementById("erroEspecieAtt").innerHTML = 
+        "A espécie é obrigatória!";
+        return false;
+    }else{
+        especie.style.background = "none";
+        document.getElementById("erroEspecieAtt").innerHTML = "";
     }
     return true;
 }
@@ -211,6 +239,20 @@ function validaRacaAnimal() {
     return true;
 }
 
+function validaRacaAnimalAtt() {
+    var raca = document.getElementById("nova_raca_animal");
+    if (raca.value == "") {
+        raca.style.background = "yellow";
+        document.getElementById("erroRacaAtt").innerHTML = 
+        "Raça obrigatória!";
+        return false;
+    }else{
+        raca.style.background = "none";
+        document.getElementById("erroRacaAtt").innerHTML = "";
+    }
+    return true;
+}
+
 function validaCorAnimal() {
     var cor = document.getElementById("cor");
     if (cor.value == "") {
@@ -221,6 +263,20 @@ function validaCorAnimal() {
     }else{
         cor.style.background = "none";
         document.getElementById("erroCorA").innerHTML = "";
+    }
+    return true;
+}
+
+function validaCorAnimalAtt() {
+    var cor = document.getElementById("nova_cor_animal");
+    if (cor.value == "") {
+        cor.style.background = "yellow";
+        document.getElementById("erroCorAtt").innerHTML = 
+        "Cor é obrigatório!";
+        return false;
+    }else{
+        cor.style.background = "none";
+        document.getElementById("erroCorAtt").innerHTML = "";
     }
     return true;
 }
@@ -240,6 +296,21 @@ function validaPorteAnimal() {
     return true;
 }
 
+function validaPorteAnimalAtt() {
+	
+    var porte = document.getElementById("novo_porte_animal");
+    if (porte.value == "") {
+        porte.style.background = "yellow";
+        document.getElementById("erroPorteAtt").innerHTML = 
+        "Porte é obrigatório!";
+        return false;
+    }else{
+        porte.style.background = "none";
+        document.getElementById("erroPorteAtt").innerHTML = "";
+    }
+    return true;
+}
+
 function validaIdadeAnimal() {
     var idade = document.getElementById("idade_animal");
     if (idade.value == "") {
@@ -250,6 +321,20 @@ function validaIdadeAnimal() {
     }else{
         idade.style.background = "none";
         document.getElementById("erroIdadeA").innerHTML = "";
+    }
+    return true;
+}
+
+function validaIdadeAnimalAtt() {
+    var idade = document.getElementById("Nova_idade_animal");
+    if (idade.value == "") {
+        idade.style.background = "yellow";
+        document.getElementById("erroIdadeAtt").innerHTML = 
+        "Idade é obrigatório!";
+        return false;
+    }else{
+        idade.style.background = "none";
+        document.getElementById("erroIdadeAtt").innerHTML = "";
     }
     return true;
 }
