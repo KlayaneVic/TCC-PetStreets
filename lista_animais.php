@@ -60,9 +60,10 @@
 									</tr>
 								</thead>
 								';
+								echo "<tbody align='center' bgcolor='white' style='border-bottom: 2px solid gold;'>";
 						while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
-							echo "<tbody align='center' bgcolor='white' style='border-bottom: 2px solid gold;'>
-									<tr>";
+					
+								echo "<tr style='border-bottom: 2px solid gold;'>";
 								$foto = $resultado['foto'];
 								echo"<td style='padding: 1em;'><img class='foto_banco' src='fotos_banco/".$foto."' style='border-radius: 2em; height: 12em;  width: 23em;'></td>";
 								echo "<td style='padding: 1em;'>" . $resultado['nome'] . "</td>";
@@ -73,12 +74,13 @@
 								echo "<td style='padding: 1em;'>" . $resultado['sexo'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['idade'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['observacoes'] . "</td>";
-								echo"<td style='padding: 1em;'> <button class='btn btn-primary' data-toggle='modal' data-target='#modalEditarAni'>Editar</button></td>";
+								echo"<td style='padding: 1em;'> <a href='edita_animal.php?animal=$resultado[id]' <button class='btn btn-primary'>Editar</button></a></td>";
 								echo"<td style='padding: 1em;'> <a href='remove_animal.php?animal=$resultado[id]' onclick='return permissao_excluir_animal()'><button class='btn btn-primary'>Excluir</button></a></td>";
 							
-							echo "</tr>
-							</tbody>";
-						} 
+							echo "</tr>";
+							
+						}
+						echo "</tbody>";
 		
 						}else{
 							$texto = null;
@@ -86,6 +88,7 @@
 						}
 					}
 						echo "</table>";
+						
 			?>
 		</div>
 		
@@ -105,7 +108,7 @@
 							echo '
 								<thead  align="center" bgcolor="gold">
 									<tr>
-										<th style="padding: 1em;">Foto </th>
+										<th style="padding: 1em; ">Foto </th>
 										<th style="padding: 1em;">Nome </th>
 										<th style="padding: 1em;">Espécie </th>
 										<th style="padding: 1em;">Raça </th>
@@ -119,8 +122,8 @@
 								</thead>
 								';
 						while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
-							echo "<tbody align='center' bgcolor='white' style='border-bottom: 2px solid gold;'
-								<tr>";
+							echo "<tbody align='center' bgcolor='white' style='border-bottom: 2px solid gold;'>
+								<tr style='border-bottom: 2px solid gold;'>";
 								$foto = $resultado['foto'];
 								echo"<td style='padding: 1em;'><img class='foto_banco' src='fotos_banco/".$foto."' style='border-radius: 2em; height: 12em;  width: 23em;'></td>";
 								echo "<td style='padding: 1em;'>" . $resultado['nome'] . "</td>";
