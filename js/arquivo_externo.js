@@ -1,19 +1,22 @@
 $(document).ready(function() {
-	$('#botao_pesquisa').click(function() {
-		$('#gato_pesquisa').show();
-	});
-});
-
-$(document).ready(function() {
 	$('#adicionar').click(function() {
-		$('#label').show();
 		var id = $('#tratamento').val();
 		var data = $('#data_tratamento').val();
 		var observacoes = $('#observacao_tratamento').val();
-		$.post('auxiliar.php', 
-			{parametro: id, parametro2: data, parametro3: observacoes},
-			function (dado, status){
-				$('#tratamento_input').append(dado);
-			});
+		
+		if (id != "" && data != "" && observacoes != ""){
+			$('#label').show();
+			
+			$.post('auxiliar.php', 
+				{parametro: id, parametro2: data, parametro3: observacoes},
+				function (dado, status){
+					$('#tratamento_input').append(dado);
+				});
+		}
 	});
 });
+
+function remover_linha(botao) {
+		var button_id = $(botao).attr("value");
+		$('#linha'+ button_id +'').remove();
+};

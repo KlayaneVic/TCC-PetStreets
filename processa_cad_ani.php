@@ -31,6 +31,7 @@
 		<br/>
 		
 		<?php
+			// Verificação da foto
 			$foto_animal = $_FILES['foto_animal'];
 			$nome_foto_animal = null;
 			
@@ -43,6 +44,8 @@
 				}
 			}
 			
+			// Declaração das variaveis
+			$text = null;
 			$id_usuario = $_SESSION["id_usuario"];
 			$nome_animal = $_POST["nome_animal"];
 			$especie = $_POST["especie"];
@@ -52,7 +55,6 @@
 			$sexo = $_POST["sexo_animal"];
 			$idade_animal = $_POST["idade_animal"];
 			$obs_animal = $_POST["Observacao_animal"];
-			
 			
 			if($especie == 1){
 				$especie = "Gato";
@@ -69,23 +71,50 @@
 			include ("cabecalho_conexao.php");
 			
 			$texto = null;
-			$SQL = "SELECT * FROM animal WHERE usuario_cadastro = $id_usuario";
 			
-			$dados_recuperados = mysqli_query($con, $SQL);
-			if($dados_recuperados){
-				if(mysqli_num_rows($dados_recuperados)){
+			// Adicionando informações no banco
+			$SQL = "INSERT INTO animal(nome, especie, raca, cor, porte, sexo, idade, observacoes, foto, usuario_cadastro)
+					VALUES ('$nome_animal', '$especie', '$raca', '$cor', '$porte', '$sexo', $idade_animal, '$obs_animal', 
+					'$nome_foto_animal', $id_usuario)";
 				
-					$SQL = "INSERT INTO animal(nome, especie, raca, cor, porte, sexo, idade, observacoes, foto, usuario_cadastro)
-							VALUES ('$nome_animal', '$especie', '$raca', '$cor', '$porte', '$sexo', $idade_animal, '$obs_animal', 
-							'$nome_foto_animal', $id_usuario)";
-							
-					echo "<h2>$nome_animal Cadastrado(a) com Sucesso!</h2>
-							  <p>Agora já pode visualizá-lo em sua lista de Animais!!</p>
-					";
+			// Salvando no banco
+			$query = mysqli_query($con, $SQL);
+			
+			// Selecionando todos os campos do animal para pegar seu id porque ele é auto_increment
+			$SQL = "SELECT id FROM animal WHERE usuario_cadastro = $id_usuario and nome = '$nome_animal'
+			and idade = $idade_animal and observacoes = '$obs_animal' and cor = '$cor' and porte = '$porte' and especie = '$especie' and sexo = '$sexo'
+			and raca = '$raca'";	
+			$dados_recuperados = mysqli_query($con, $SQL);
+			if ($dados_recuperados){
+				if(mysqli_num_rows($dados_recuperados) > 0){
+					$resultado = mysqli_fetch_assoc($dados_recuperados);
+					$id_animal = $resultado['id'];
 				}
 			}
-
-			include('rodape_conexao.php'); 
+			
+			// Pegando os dados dos inputs criados para armazenamento no banco 
+			if ($_SESSION['i'] != 0){
+				$SQL = "INSERT INTO animal_tratamento(idAnimal, idTratamento, dataTratamento, observacao)
+				VALUES "; 
+				for ($i=0; $i < $_SESSION['i']; $i++){
+					$id_tratamento = $_SESSION["id_tratamento_$i"];
+					$data_tratamento = $_SESSION["tratamento_data_$i"];
+					$obs_tratamento = $_SESSION["tratamento_obs_$i"];
+					
+					if ($i < $_SESSION['i']-1) {
+						$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento'),";
+					}
+					else {
+						$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento');";
+					}
+				} 
+			}
+			
+			echo "<h2>$nome_animal Cadastrado(a) com Sucesso!</h2>
+				  <p>Agora já pode visualizá-lo em sua lista de Animais!!</p>
+			";
+			
+			include ('rodape_conexao.php');
 			include ('rodape.inc');
 			
 		?> 

@@ -32,7 +32,7 @@
 		</nav>
 		<br/>
 		<div class="conteiner">
-			<form action="processa_exemplo.php" id="tabela_animal" method="POST" align="center" class="formCadastro" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
+			<form action="processa_cad_ani.php" id="form_animal" method="POST" align="center" class="formCadastro" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
 				<h5>Cadastre seu animalzinho agora e ajude-o!! </h5><br/>
 				<p>
 					<label>Nome: </label>
@@ -85,7 +85,7 @@
 					<div id="tratamento_input"></div></br>
 				</p>
 				
-				<button class="btn btn-primary" data-toggle="modal" data-target="#modalAdicionarTratamento">Adicionar Tratamento</button><br>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAdicionarTratamento">Adicionar Tratamento</button><br>
 				
 				<input type="submit" value="Confirmar" />
 			</form>
@@ -109,7 +109,7 @@
 						<div class="row">
 								<p>
 									Data Tratamento: 
-									<input type="text" id="data_tratamento" name="data_tratamento" required />
+									<input type="date" id="data_tratamento" name="data_tratamento" required />
 								</p>
 								<p>
 									Observações:
@@ -139,7 +139,7 @@
 									
 									</select>
 									
-									 <button type="submit" class="btn btn-primary" id="adicionar">+ Adicionar</button>
+									 <button type="button" class="btn btn-primary" id="adicionar">+ Adicionar</button>
 												
 							</div>
 					</div>
