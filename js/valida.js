@@ -6,7 +6,7 @@ function validaEmail() {
         "E-mail é obrigatório!";
         return false;
     }else{
-        email.style.background = "none";
+        email.style.background = "white";
         document.getElementById("erroEmail").innerHTML = "";
     }
     return true;
@@ -20,7 +20,7 @@ function validaEmailAtt() {
         "E-mail é obrigatório!";
         return false;
     }else{
-        email.style.background = "none";
+        email.style.background = "white";
         document.getElementById("erroEmailAtt").innerHTML = "";
     }
     return true;
@@ -34,7 +34,7 @@ function validaBairro() {
         "Bairro é obrigatório!";
         return false;
     }else{
-        bairro.style.background = "none";
+        bairro.style.background = "white";
         document.getElementById("erroBairro").innerHTML = "";
     }
     return true;
@@ -48,7 +48,7 @@ function validaBairroAtt() {
         "Bairro é obrigatório!";
         return false;
     }else{
-        bairro.style.background = "none";
+        bairro.style.background = "white";
         document.getElementById("erroBairroAtt").innerHTML = "";
     }
     return true;
@@ -62,7 +62,7 @@ function validaSenha() {
         "Senha é obrigatório!";
         return false;
     }else{
-        senha.style.background = "none";
+        senha.style.background = "white";
         document.getElementById("erroSenha").innerHTML = "";
     }
     return true;
@@ -76,7 +76,7 @@ function validaSenhaAtt() {
         "Senha é obrigatório!";
         return false;
     }else{
-        senha.style.background = "none";
+        senha.style.background = "white";
         document.getElementById("erroSenhaAtt").innerHTML = "";
     }
     return true;
@@ -90,7 +90,7 @@ function validaNome() {
         "Nome é obrigatório!";
         return false;
     }else{
-        nome.style.background = "none";
+        nome.style.background = "white";
         document.getElementById("erroNome").innerHTML = "";
     }
     return true;
@@ -104,7 +104,7 @@ function validaNomeAtt() {
         "Nome é obrigatório!";
         return false;
     }else{
-        nome.style.background = "none";
+        nome.style.background = "white";
         document.getElementById("erroNomeAtt").innerHTML = "";
     }
     return true;
@@ -118,7 +118,7 @@ function validaCidade() {
         "Cidade é obrigatório!";
         return false;
     }else{
-        cidade.style.background = "none";
+        cidade.style.background = "white";
         document.getElementById("erroCidade").innerHTML = "";
     }
     return true;
@@ -132,7 +132,7 @@ function validaCidadeAtt() {
         "Cidade é obrigatório!";
         return false;
     }else{
-        cidade.style.background = "none";
+        cidade.style.background = "white";
         document.getElementById("erroCidadeAtt").innerHTML = "";
     }
     return true;
@@ -147,7 +147,7 @@ function validaTelefone(){
         "Telefone em formato invalido! Tente no formato (XX) 9XXXX-XXXX !!";
         return false;
     }else{
-        tel.style.background = "none";
+        tel.style.background = "white";
         document.getElementById("erroTelefone").innerHTML = "";
     }
     return true;
@@ -162,7 +162,7 @@ function validaTelefoneAtt(){
         "Formato invalido! Tente no formato (XX) 9XXXX-XXXX !!";
         return false;
     }else{
-        tel.style.background = "none";
+        tel.style.background = "white";
         document.getElementById("erroTelefoneAtt").innerHTML = "";
     }
     return true;
@@ -177,7 +177,7 @@ function validaNomeAnimal() {
         "Nome é obrigatório!";
         return false;
     }else{
-        nome_animal.style.background = "none";
+        nome_animal.style.background = "white";
         document.getElementById("erroNomeA").innerHTML = "";
     }
     return true;
@@ -191,7 +191,7 @@ function validaNomeAnimalAtt() {
         "Nome é obrigatório!";
         return false;
     }else{
-        nome_animal.style.background = "none";
+        nome_animal.style.background = "white";
         document.getElementById("erroNomeAnimal").innerHTML = "";
     }
     return true;
@@ -205,7 +205,7 @@ function validaEspecieAnimal() {
         "A espécie é obrigatória!";
         return false;
     }else{
-        especie.style.background = "none";
+        especie.style.background = "white";
         document.getElementById("erroEspecieA").innerHTML = "";
     }
     return true;
@@ -219,7 +219,7 @@ function validaEspecieAnimalAtt() {
         "A espécie é obrigatória!";
         return false;
     }else{
-        especie.style.background = "none";
+        especie.style.background = "white";
         document.getElementById("erroEspecieAtt").innerHTML = "";
     }
     return true;
@@ -233,7 +233,7 @@ function validaRacaAnimal() {
         "Raça obrigatória!";
         return false;
     }else{
-        raca.style.background = "none";
+        raca.style.background = "white";
         document.getElementById("erroRacaA").innerHTML = "";
     }
     return true;
@@ -247,7 +247,7 @@ function validaRacaAnimalAtt() {
         "Raça obrigatória!";
         return false;
     }else{
-        raca.style.background = "none";
+        raca.style.background = "white";
         document.getElementById("erroRacaAtt").innerHTML = "";
     }
     return true;
@@ -261,7 +261,7 @@ function validaCorAnimal() {
         "Cor é obrigatório!";
         return false;
     }else{
-        cor.style.background = "none";
+        cor.style.background = "white";
         document.getElementById("erroCorA").innerHTML = "";
     }
     return true;
@@ -275,7 +275,7 @@ function validaCorAnimalAtt() {
         "Cor é obrigatório!";
         return false;
     }else{
-        cor.style.background = "none";
+        cor.style.background = "white";
         document.getElementById("erroCorAtt").innerHTML = "";
     }
     return true;
@@ -290,7 +290,7 @@ function validaPorteAnimal() {
         "Porte é obrigatório!";
         return false;
     }else{
-        porte.style.background = "none";
+        porte.style.background = "white";
         document.getElementById("erroPorteA").innerHTML = "";
     }
     return true;
@@ -305,7 +305,7 @@ function validaPorteAnimalAtt() {
         "Porte é obrigatório!";
         return false;
     }else{
-        porte.style.background = "none";
+        porte.style.background = "white";
         document.getElementById("erroPorteAtt").innerHTML = "";
     }
     return true;
@@ -319,7 +319,7 @@ function validaIdadeAnimal() {
         "Idade é obrigatório!";
         return false;
     }else{
-        idade.style.background = "none";
+        idade.style.background = "white";
         document.getElementById("erroIdadeA").innerHTML = "";
     }
     return true;
@@ -333,14 +333,24 @@ function validaIdadeAnimalAtt() {
         "Idade é obrigatório!";
         return false;
     }else{
-        idade.style.background = "none";
+        idade.style.background = "white";
         document.getElementById("erroIdadeAtt").innerHTML = "";
     }
     return true;
 }
 
-function permissao_excluir_animal(){
-    var confirmacao = confirm("Tem certeza que deseja excluir?");
+function permissao_status_animal(){
+    var confirmacao = confirm("Deseja mesmo adicionar este animal à lista de adotados?");
+    if(!confirmacao){
+        window.location.href ="lista_animais.php";
+        return false;
+    }else{
+        return confirmacao;
+    }
+}
+
+function permissao_divulga_animal() {
+	var confirmacao = confirm("Gostaria de nos ajudar o adicionando na Pagina inicial de 'Adotados com Sucesso'? Clique em OK.");
     if(!confirmacao){
         window.location.href ="lista_animais.php";
         return false;

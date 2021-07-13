@@ -13,6 +13,7 @@
     	<script src="js/popper.min.js"></script>
     	<script src="js/bootstrap.min.js"></script>
 		<script src="js/valida.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 		<style>
 			body{
 				background-color: #FFFFE0;
@@ -28,18 +29,36 @@
 		</nav>
 		<br/>
 			<div class="container">
-				<form action="processa_log_usu.php" method="POST" align="center" class="formLogin" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
-					<h5>Entre com seus dados previamente cadastrados.</h5><br>
-					<p>
-						E-mail: <input type="text" name="email_usuario" required />
-					</p>
-					<p>
-						Senha: <input type="text" name="senha_usuario" required />
-					</p>
+				<form action="processa_log_usu.php" method="POST" class="formLogin" style="background-color: gold; margin: 2em 15em 2em 15em; padding: 1em;
+				border-radius: 5em; padding: 4em; box-shadow: 2px 2px 2em #888;">
+					<div align="center"><img src="img/login.gif" style="border-radius: 2em; height: 8em; width: 30em;"></div><br>
+					<h4 align="center" style="color: purple;"> ------------------------ ❤ ------------------------ </h4>
+					<h5 class="text-center">Entre com o seu <b>Usuário</b> e <b>Senha</b></h5>
+					<h4 align="center" style="color: purple;"> ---------------------------------------------------- </h4>
 					
-					<input type="submit" value="Confirmar" />
+					<div class="form-row">
+						<div class="form-group col-md-1">
+                            <i class="material-icons">account_circle</i>
+						</div>
+						<div class="form-group col-md-11">
+							<input type="text" class="form-control" name="email_usuario" placeholder="Seu e-mail" required />
+							<small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-1">
+                            <i class="material-icons">lock</i>
+                        </div>
+						<div class="form-group col-md-11">
+							<input type="text" class="form-control" name="senha_usuario" placeholder="Senha" required />
+						</div>
+					</div><br>
+					<div class="form-group" align="right">
+						<input type="reset" class="btn btn-danger" value="Limpar" />
+						<input type="submit" value="Confirmar" class="btn btn-primary" />
+					</div>
 			</form>
-        </div>
+        </div><br>
 		<?php
 			include ('rodape.inc');
 		?>

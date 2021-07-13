@@ -26,23 +26,11 @@
     
 
     include("cabecalho_conexao.php");
-	
-	if($Nova_especie == 1){
-		$Nova_especie = "Gato";
-	} else if($Nova_especie ==  2){
-		$Nova_especie = "Cachorro";
-	}
-	
-	if($Novo_sexo == "f"){
-		$Novo_sexo = "Fêmea";
-	} else{
-		$Novo_sexo = "Macho";
-	}
     
     $texto = null;
 
-    $SQL = "UPDATE animal SET nome='$Novo_nome_Animal', especie='$Nova_especie', raca='$Nova_raca', cor='$Nova_cor', 
-    porte='$Novo_porte', sexo ='$Novo_sexo', idade= $Nova_idade, observacoes='$Nova_observacoes', foto='$nome_Nova_foto' WHERE id= $id_animal";
+    $SQL = "UPDATE animal SET nome_animal='$Novo_nome_Animal', especie='$Nova_especie', raca='$Nova_raca', cor='$Nova_cor', 
+    porte='$Novo_porte', sexo ='$Novo_sexo', idade= '$Nova_idade', observacoes='$Nova_observacoes', foto_animal='$nome_Nova_foto' WHERE id= $id_animal";
     
     
     include("rodape_conexao.php");

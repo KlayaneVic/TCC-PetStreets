@@ -28,22 +28,23 @@
 		<nav class="nav2" style="background-color: gold; color: black;">
 			<h5>Suas listas de animais</h5>
 		</nav>
-		<br/>
+		<br><br>
 		<?php
 			include('cabecalho_conexao.php');
 		?>
-		<div class="conteiner" align="center" enctype="multipart/form-data" style="overflow: auto; width: 100%; height: 100%;">
-			<h5>Lista de Animais Cadastrados</h5><br/>
+		
+		<h5 align="center">Lista de Animais Cadastrados</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
-				$SQL = "SELECT * FROM animal WHERE usuario_cadastro = $id_usuario";
-				
+				$SQL = "SELECT * FROM animal WHERE usuario_cadastro = $id_usuario and status = 0 ORDER BY id DESC";
 				$dados_recuperados = mysqli_query($con, $SQL);
-					echo "<table style='border-bottom: 10px solid gold;'>";
+				
 					if($dados_recuperados){
 						if(mysqli_num_rows($dados_recuperados) > 0){
 							$texto = null;
 							echo '
+							<div class="conteiner" align="center" enctype="multipart/form-data" style="overflow-y: auto; height: 35em; margin: 0em 5em 2em 5em;">
+							<table style="border-bottom: 10px solid gold;">
 								<thead  align="center" bgcolor="gold">
 									<tr>
 										<th style="padding: 1em;">Foto </th>
@@ -56,7 +57,7 @@
 										<th style="padding: 1em;">Idade </th>
 										<th style="padding: 1em;">Observações </th>
 										<th style="padding: 1em;">Alterar </th>
-										<th style="padding: 1em;">Excluir </th>
+										<th style="padding: 1em;">Status </th>
 									</tr>
 								</thead>
 								';
@@ -64,18 +65,28 @@
 						while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
 					
 								echo "<tr style='border-bottom: 2px solid gold;'>";
-								$foto = $resultado['foto'];
+								$foto = $resultado['foto_animal'];
 								echo"<td style='padding: 1em;'><img class='foto_banco' src='fotos_banco/".$foto."' style='border-radius: 2em; height: 12em;  width: 23em;'></td>";
-								echo "<td style='padding: 1em;'>" . $resultado['nome'] . "</td>";
+								echo "<td style='padding: 1em;'>" . $resultado['nome_animal'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['especie'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['raca'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['cor'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['porte'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['sexo'] . "</td>";
-								echo "<td style='padding: 1em;'>" . $resultado['idade'] . "</td>";
-								echo "<td style='padding: 1em;'>" . $resultado['observacoes'] . "</td>";
+								if ($resultado['idade'] == 'Indefinida'){
+										echo "<td style='padding: 1em;'>Idade Indefinida</td>";
+									}elseif($resultado['idade'] == 'Filhote'){
+										echo "<td style='padding: 1em;'>Filhote <br>(- 6 Meses)</td>";
+									}elseif($resultado['idade'] == 'Jovem'){
+										echo "<td style='padding: 1em;'>Jovem <br>(7 Meses à 2 Anos)</td>";
+									}elseif($resultado['idade'] == 'Adulto'){
+										echo "<td style='padding: 1em;'>Adulto <br>(3 anos à 8 Anos)</td>";
+									}else{
+										echo "<td style='padding: 1em;'>Idoso <br>(+ 9 Anos)</td>";
+									}
+								echo "<td style='padding: 1em;' align='justify'>" . $resultado['observacoes'] . "</td>";
 								echo"<td style='padding: 1em;'> <a href='edita_animal.php?animal=$resultado[id]' <button class='btn btn-primary'>Editar</button></a></td>";
-								echo"<td style='padding: 1em;'> <a href='remove_animal.php?animal=$resultado[id]' onclick='return permissao_excluir_animal()'><button class='btn btn-primary'>Excluir</button></a></td>";
+								echo"<td style='padding: 1em;'> <a href='modifica_status_animal.php?animal=$resultado[id]' onclick='return permissao_status_animal()'><button class='btn btn-primary'>+ Confirmar Adoção</button></a></td>";
 							
 							echo "</tr>";
 							
@@ -84,28 +95,26 @@
 		
 						}else{
 							$texto = null;
-							echo "<h6 style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Animais Cadastrados ...</h6>";
+							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Animais Cadastrados ...</h6>";
 						}
 					}
-						echo "</table>";
+						echo "</table></div>";
 						
 			?>
-		</div>
+			<br><br><br>
 		
-		<br/><br/><br/>
-		
-		<div class="conteiner" align="center" enctype="multipart/form-data">
-			<h5>Lista de Animais Adotados</h5><br/>
+		<h5 align="center">Lista de Animais Adotados</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
-				$SQL = "SELECT * FROM animal WHERE usuario_adocao = $id_usuario";
-					
-					$dados_recuperados = mysqli_query($con, $SQL);
-					echo "<table style='border-bottom: 10px solid gold;'>";
+				$SQL = "SELECT * FROM animal WHERE usuario_cadastro = $id_usuario and status = 1 ORDER BY id DESC";
+				$dados_recuperados = mysqli_query($con, $SQL);
+				
 					if($dados_recuperados){
 						if(mysqli_num_rows($dados_recuperados) > 0){
 							$texto = null;
 							echo '
+							<div class="conteiner" align="center" enctype="multipart/form-data" style="overflow-y: auto; height: 35em; margin: 0em 5em 0em 5em;">
+								<table style="border-bottom: 10px solid gold;">
 								<thead  align="center" bgcolor="gold">
 									<tr>
 										<th style="padding: 1em; ">Foto </th>
@@ -117,35 +126,51 @@
 										<th style="padding: 1em;">Sexo </th>
 										<th style="padding: 1em;">Idade </th>
 										<th style="padding: 1em;">Observações </th>
-										<th style="padding: 1em;">Excluir </th>
+										<th style="padding: 1em;">Status </th>
+										<th style="padding: 1em;">Permissão </th>
 									</tr>
 								</thead>
 								';
 						while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
 							echo "<tbody align='center' bgcolor='white' style='border-bottom: 2px solid gold;'>
 								<tr style='border-bottom: 2px solid gold;'>";
-								$foto = $resultado['foto'];
+								$foto = $resultado['foto_animal'];
 								echo"<td style='padding: 1em;'><img class='foto_banco' src='fotos_banco/".$foto."' style='border-radius: 2em; height: 12em;  width: 23em;'></td>";
-								echo "<td style='padding: 1em;'>" . $resultado['nome'] . "</td>";
+								echo "<td style='padding: 1em;'>" . $resultado['nome_animal'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['especie'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['raca'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['cor'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['porte'] . "</td>";
 								echo "<td style='padding: 1em;'>" . $resultado['sexo'] . "</td>";
-								echo "<td style='padding: 1em;'>" . $resultado['idade'] . "</td>";
-								echo "<td style='padding: 1em;'>" . $resultado['observacoes'] . "</td>";
-								echo"<td> <a href='remove_animal.php?animal=$resultado[id]' onclick='return permissao_excluir_animal()'><button class='btn btn-primary'>Excluir</button></a></td>";
+									if ($resultado['idade'] == 'Indefinida'){
+										echo "<td style='padding: 1em;'>Idade Indefinida</td>";
+									}elseif($resultado['idade'] == 'Filhote'){
+										echo "<td style='padding: 1em;'>Filhote <br>(- 6 Meses)</td>";
+									}elseif($resultado['idade'] == 'Jovem'){
+										echo "<td style='padding: 1em;'>Jovem <br>(7 Meses à 2 Anos)</td>";
+									}elseif($resultado['idade'] == 'Adulto'){
+										echo "<td style='padding: 1em;'>Adulto <br>(3 anos à 8 Anos)</td>";
+									}else{
+										echo "<td style='padding: 1em;'>Idoso <br>(+ 9 Anos)</td>";
+									}
+								echo "<td style='padding: 1em;' align='justify'>" . $resultado['observacoes'] . "</td>";
+								echo "<td style='padding: 1em; color: green;'> Animal Adotado ✔</td>";
+								if ($resultado['permissao'] == 0){
+								echo "<td style='padding: 1em;'><a href='modifica_permissao_animal.php?animal=$resultado[id]' onclick='return permissao_divulga_animal()'><button class='btn btn-primary'>Permitir Divulgação</button></a></td>";
+								}else{
+									echo "<td style='padding: 1em; color: green;'> Animal Divulgado ✔</td>";
+								}
 							echo "</tr>
 							</tbody>";
 						} 
 						}else{
 							$texto = null;
-							echo "<h6 style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Animais Adotados ...</h6>";
+							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Animais que foram Adotados ...</h6>";
 						}
 					}
-					echo "</table><br>";
+					echo "</table></div>";
 				?>
-		</div>
+		<br><br>
 		
 		<?php
 			include('rodape_conexao.php'); 

@@ -44,13 +44,6 @@
 						$cidade_usuario = $_POST['cidade_usuario'];
 						$telefone_usuario = $_POST['telefone_usuario'];
 						$tipo_usuario = $_POST['tipo_usuario'];
-						
-							if($tipo_usuario == 1){
-								$tipo_usuario = 'Usuário Comum';
-							}else{
-								$tipo_usuario = 'Usuário Comum ONG';
-							}
-						
 
 						 //Abrindo conexão com o BD
 						 include('cabecalho_conexao.php');
@@ -59,15 +52,21 @@
 						 $dados_recuperados = mysqli_query($con, $SQL);
 							 if($dados_recuperados){
 								if(mysqli_num_rows($dados_recuperados) > 0){
-									$texto = "<h2>E-mail já existente, tente formular outro!!</h2>";
+									echo ("<script language='JavaScript'>
+												window.alert('E-mail já existente, tente formular outro!!')
+												window.location.href='cadastro_usuario.php';
+											</script>");
+									$texto = null;
 								}else{
-									$SQL = "INSERT INTO usuario (nome, email, senha, tipo, bairro, cidade, telefone, adm, foto) 
+									$SQL = "INSERT INTO usuario (nome_usuario, email, senha, tipo, bairro, cidade, telefone, adm, foto_usuario) 
 											VALUE ('$nome_usuario', '$email_usuario', '$senha_usuario', '$tipo_usuario', '$bairro_usuario', '$cidade_usuario',
 											'$telefone_usuario', 0, '$nome_foto')";
 									
-											 $texto = "<h2>Seja Bem Vindo(a), Esperamos de Encontre o que Procure!!</h2>
-													   <h2>Prossiga para o Login</h2>
-													   <p>$nome_usuario Cadastrado(a) com Sucesso!</p>";
+											 echo ("<script language='JavaScript'>
+												window.alert('Seja Bem Vindo(a), Esperamos que Encontre o que Procure!! $nome_usuario Cadastrado(a) com Sucesso! Redirecionando para o Login...')
+												window.location.href='login_usuario.php';
+											</script>");
+											 $texto = null;
 								}
 							}
 							

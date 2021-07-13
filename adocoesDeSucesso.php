@@ -36,14 +36,54 @@
         <nav class="nav2" style="background-color: gold; color: black;">
 			<h5>Adoções de Sucesso</h5>
 		</nav>
-		<br/>
-        <div class="container">
-            <div class="row">
-                <h5>Ainda não há descrição Recebida!!</h5>
-            </div>
-        </div>
+		
 		<?php
-			include ('rodape.inc');
+			include('cabecalho_conexao.php');
+			
+			$texto = null;
+
+            $SQL = "SELECT a.*, u.*
+						FROM animal a
+							INNER JOIN usuario u 
+								ON a.usuario_cadastro = u.id_usuario and a.status = 1 and a.permissao = 1 ORDER BY id DESC LIMIT 16";
+
+            $dados_recuperados = mysqli_query($con, $SQL);
+			$resultado =  null;
+
+            echo '<br><br><div class="card-deck" style="margin: 0em 2em 0em 2em;">';
+					
+                    if($dados_recuperados){
+                        if(mysqli_num_rows($dados_recuperados) > 0){
+                           while (($resultado =  mysqli_fetch_assoc($dados_recuperados)) != null){
+						   $foto = $resultado["foto_animal"];
+						   $id = $resultado["id"];
+                           echo '
+								<div class="form-group col-md-3"><div class="card" style="box-shadow: 2px 2px 2em #888; margin: 0em 0em 2em 0em; border-radius: 2em;">
+									<img class="card-img-top" src="fotos_banco/'.$foto.'" alt="Imagem de capa do card" style="height: 15em; padding: 0.8em 0.8em 0em 0.8em; border-radius: 3em;">
+									<div class="card-body">
+									   <h5 class="card-title" align="center"><b>'. $resultado['nome_animal'].', Porte '. $resultado['porte'].'</b> <br> (' . $resultado['bairro'].', '. $resultado['cidade'] .')</h5>
+									  <p class="card-text">
+											
+									  </p>
+									</div>
+								  </div></div>
+							';
+						   }
+                        }
+                    }else{
+						echo '
+						<div class="container">
+							<div class="row">
+								<h5>Ainda não há descrição Recebida!!</h5>
+							</div>
+						</div>
+						';
+					}
+			echo '</div><br>';
 		?>
+		<?php
+            include ("rodape_conexao.php");
+			include ("rodape.inc");
+        ?>
     </body>
 </html>

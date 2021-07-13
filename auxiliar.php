@@ -41,9 +41,12 @@
 										Tipo Tratamento: <input type='text' id='$id' name='tratamento_inp_".$i."' value='$nome - $categoria' disabled />
 										Data Tratamento: <input type='date' id='$id' name='tratamento_data_".$i."' value='$parametro2' disabled />
 										Observações do Tratamento: <input type='text' id='$id' name='tratamento_obs_".$i."' value='$parametro3' disabled />
-										<button id='remover".$i."' class='btn-apagar' type='button' value='".$i."' onclick='remover_linha(this);'>Remover</button>
-									</p><br>";
+										<button id='remover".$i."' class='btn btn-danger' value='".$i."' onclick='remover_linha(this);'>Remover</button>
+									</p><br>
+										<input type='hidden' id='escondido_".$i."' name='hidden_".$i."' value='0' />
+									";
                         
+							
 							// passando os dados do tratamento pela sessao
 							$_SESSION["id_tratamento_$i"] = $id;
 							$_SESSION["tratamento_data_$i"] = $parametro2;

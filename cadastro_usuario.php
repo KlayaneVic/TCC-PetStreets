@@ -25,52 +25,68 @@
 		</nav>
 		<br/>
 			<div class="container">
-				<form action="processa_cad_usu.php" method="POST" align="center" class="formCadastro" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
-					<h5>Cadastre-se Agora e Faça a Diferença!! </h5><br>
-					<p>
-						<label>Nome Completo:</label>
-						<input type="text" id="nome_usuario" name="nome_usuario" onfocusout="validaNome()" required />
-						<br><span id="erroNome" style="color: red;"></span>
-					</p>
-					<p>
-						<label>Telefone:</label>
-						<input type="text" id="telefone_usuario" name="telefone_usuario" onfocusout="validaTelefone()" required />
-						<br><span id="erroTelefone" style="color: red;"></span>
-					</p>
-					<p>
-						<label>Cidade:</label>
-						<input type="text" id="cidade_usuario" name="cidade_usuario" onfocusout="validaCidade()" required />
-						<br><span id="erroCidade" style="color: red;"></span>
-					</p>
-					<p>
-						<label>Bairro:</label>
-						<input type="text" id="bairro_usuario" name="bairro_usuario" onfocusout="validaBairro()" required />
-						<br><span id="erroBairro" style="color: red;"></span>
-					</p>
-					<p>
-						<label>E-mail:</label>
-						<input type="text" id="email_usuario" name="email_usuario" onfocusout="validaEmail()" required />
-						<br><span id="erroEmail" style="color: red;"></span>
-					</p>
-					<p>
-						<label>Tipo de Usuário:</label>
-						<select name="tipo_usuario" required>
-							<option value="1" selected="selected">Usuário Comum</option>
-							<option value="2">Usuário Comum ONG</option>
-						</select>
-					</p>
-					<p>
-						<label>Senha:</label> 
-						<input type="text" id="senha_usuario" name="senha_usuario" onfocusout="validaSenha()" required />
-						<br><span id="erroSenha" style="color: red;"></span>
-					</p>
-					<p>
-						<label>Foto:</label>
-						<input type="file" name="foto_usuario" /></br>
-					</p>
-					<input type="submit" value="Confirmar" />
+				<form action="processa_cad_usu.php" method="POST" class="formCadastro" enctype="multipart/form-data" 
+				style="background-color: gold; border-radius: 5em; box-shadow: 2px 2px 2em #888; margin: 2em 4em 2em 4em; padding: 2em 6em 1em 6em;">
+						<div class="form-row">
+								<div class="form-group col-md-8">
+									<label>Nome Completo</label><br>
+									<input class="form-control" type="text" id="nome_usuario" name="nome_usuario" style="text-transform: capitalize;" onfocusout="validaNome()" placeholder="Seu Nome" required />
+									<span id="erroNome" style="color: red;"></span>
+								</div>
+						<div class="form-group col-md-4">
+							<label>Telefone</label><br>
+							<input class="form-control" type="text" id="telefone_usuario" name="telefone_usuario" onfocusout="validaTelefone()" placeholder="(XX) 9XXXX-XXXX" required />
+							<span id="erroTelefone" style="color: red;"></span>
+						</div>
+					</div>
+					<div class="form-row">
+								<div class="form-group col-md-6">
+									<label>Cidade</label><br>
+									<input class="form-control" type="text" id="cidade_usuario" name="cidade_usuario" style="text-transform: capitalize;" onfocusout="validaCidade()" placeholder="Cidade" required />
+									<span id="erroCidade" style="color: red;"></span>
+								</div>
+								<div class="form-group col-md-6">
+									<label>Bairro</label><br>
+									<input class="form-control" type="text" id="bairro_usuario" name="bairro_usuario" style="text-transform: capitalize;" onfocusout="validaBairro()" placeholder="Bairro" required />
+									<span id="erroBairro" style="color: red;"></span>
+								</div>
+					</div>
+					<div class="form-row">
+								<div class="form-group col-md-8">
+									<label>E-mail</label><br>
+									<div class="input-group mb-2">
+										<div class="input-group-prepend">
+										  <div class="input-group-text">@</div>
+										</div>
+											<input class="form-control" type="text" id="email_usuario" name="email_usuario" onfocusout="validaEmail()" placeholder="nome@exemplo.com" required />
+									  </div>
+									<span id="erroEmail" style="color: red;"></span>
+								</div>
+								<div class="form-group col-md-4">
+									<label>Tipo de Usuário</label><br>
+									<select class="form-control" name="tipo_usuario" required>
+										<option value="" selected hidden >---</option>
+										<option value="Usuário Comum">Usuário Comum</option>
+										<option value="Usuário Comum ONG">Usuário Comum ONG</option>
+									</select>
+								</div>
+					</div>
+					<div class="form-row">
+						<label>Senha</label><br>
+						<input class="form-control" type="text" id="senha_usuario" name="senha_usuario" onfocusout="validaSenha()" placeholder="Senha" required />
+						<span id="erroSenha" style="color: red;"></span>
+					</div>
+					<div class="form-row">
+						<label>Foto</label><br>
+						<input class="form-control" type="file" name="foto_usuario" /></br>
+						<small id="emailHelp3" class="form-text text-muted">Todos os dados, exceto senha, email e foto, serão visiveis a outros usuários.</small>
+					</div>
+					<br><br><div class="form-group" align="right">
+						<input type="reset" class="btn btn-danger" value="Limpar" />
+						<input type="submit" value="Confirmar" class="btn btn-primary" />
+					</div>
 			</form>
-        </div>
+        </div><br>
 		<?php
 			include ('rodape.inc');
 		?>

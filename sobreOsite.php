@@ -37,7 +37,7 @@
 			<h5>Sobre o Site</h5>
 		</nav>
 		
-		<h5 style="margin-left: 2em;">Afinal, do que se trata o PetStreets?</h5>
+		<br><h5 style="margin-left: 2em;">Afinal, do que se trata o PetStreets?</h5>
 		<p align="justify" style="margin-left: 10em; margin-right: 10em;">O Sistema PetStreets, tem por finalidade ajudar animais que estão em situações de rua abandonados, com fome, sujos e doentes a encontrar um dono e respectivamente bom lar. 
 		Nossa proposta é fornecer um local de armazenamento e interação para que haja as possiveis adoções, e com isso, nós desenvolvedores criamos este site com esta finalidade.</p>
 	

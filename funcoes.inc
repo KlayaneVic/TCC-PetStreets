@@ -2,11 +2,11 @@
 	function verificaAtt_Email($id, $nome_fotoEdit, $senhaEdit, $emailEdit, $bairroEdit, $cidadeEdit, $telefoneEdit, $nomeEdit){
 
 			if ($nome_fotoEdit != null){
-				$SQL = "UPDATE usuario SET nome='$nomeEdit', telefone='$telefoneEdit', cidade='$cidadeEdit', 
-				bairro='$bairroEdit', email='$emailEdit', senha='$senhaEdit', foto='$nome_fotoEdit' WHERE id_usuario = $id";
+				$SQL = "UPDATE usuario SET nome_usuario='$nomeEdit', telefone='$telefoneEdit', cidade='$cidadeEdit', 
+				bairro='$bairroEdit', email='$emailEdit', senha='$senhaEdit', foto_usuario='$nome_fotoEdit' WHERE id_usuario = $id";
 													
 			}else{
-				$SQL = "UPDATE usuario SET nome='$nomeEdit', telefone='$telefoneEdit', cidade='$cidadeEdit', 
+				$SQL = "UPDATE usuario SET nome_usuario='$nomeEdit', telefone='$telefoneEdit', cidade='$cidadeEdit', 
 				bairro='$bairroEdit', email='$emailEdit', senha='$senhaEdit' WHERE id_usuario = $id";
 													
 			}

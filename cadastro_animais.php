@@ -32,64 +32,84 @@
 		</nav>
 		<br/>
 		<div class="conteiner">
-			<form action="processa_cad_ani.php" id="form_animal" method="POST" align="center" class="formCadastro" enctype="multipart/form-data" style="background-color: gold; margin: 2em; border-radius: 10em; padding: 5em;">
-				<h5>Cadastre seu animalzinho agora e ajude-o!! </h5><br/>
-				<p>
-					<label>Nome: </label>
-					<input type="text" id="nome_animal" name="nome_animal" onfocusout="validaNomeAnimal()" required />
-					<br/><span id="erroNomeA" style="color: red;"></span>
-				</p>
-				<p>
-					<label>Espécie: </label>&emsp;&emsp;
-					<select name="especie" required>
-						<option value="1">Gato</option>
-						<option value="2">Cachorro </option>
-					</select>
-				</p>
-				<p>
-					<label>Raça: </label>
-					<input type="text" id="raca" name="raca" onfocusout="validaRacaAnimal()" required />
-					<br/><span id="erroRacaA" style="color: red;"></span>
-				</p>
-				<p>
-					<label>Cor: </label>
-					<input type="text" id="cor" name="cor" onfocusout="validaCorAnimal()" required />
-					<br/><span id="erroCorA" style="color: red;"></span>
-				</p>
-				<p>
-					<label>Porte: </label>
-					<input type="text" id="porte" name="porte" onfocusout="validaPorteAnimal()" required />
-					<br/><span id="erroPorteA" style="color: red;"></span>
-				</p>
-				<p>
-					<label>Sexo: </label>&emsp;&emsp;
-					<input type="radio" id="sexo_animal" name="sexo_animal" value="f" onfocusout="validaSexoAnimal()" required />Fêmea&ensp;
-					<input type="radio" id="sexo_animal" name="sexo_animal" value="m" onfocusout="validaSexoAnimal()" required />Macho
-				</p>
-				<p>
-					<label>Idade: </label>
-					<input type="number" id="idade_animal" name="idade_animal" onfocusout="validaIdadeAnimal()" required />
-					<br/><span id="erroIdadeA" style="color: red;"></span>
-				</p>
-				<p>
-					<label>Observações: </label>
-					<textarea id="observacao_animal" name="Observacao_animal" required></textarea>
-				</p>
-				<p>
-					<label>Foto:</label>
-					<input type="file" name="foto_animal" required /></br>
-				</p>
-				
-				<p>
-					<label style="display: none" id="label">Tratamentos:</label>
-					<div id="tratamento_input"></div></br>
-				</p>
-				
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAdicionarTratamento">Adicionar Tratamento</button><br>
-				
-				<input type="submit" value="Confirmar" />
+			<form action="processa_cad_ani.php" id="form_animal" method="POST" class="formCadastro" enctype="multipart/form-data" 
+			style="background-color: gold; border-radius: 5em; box-shadow: 2px 2px 2em #888; margin: 2em 9em 2em 9em; padding: 2em 5em 2em 5em;">
+				<div class="form-row">
+						<div class="form-group col-md-6">
+								<label>Nome </label><br>
+								<input class="form-control" type="text" id="nome_animal" name="nome_animal" style="text-transform: capitalize;" onfocusout="validaNomeAnimal()" placeholder="Nome do Animal" required />
+								<span id="erroNomeA" style="color: red;"></span>
+						</div>
+						<div class="form-group col-md-2">
+							<label>Idade </label>
+							<select class="form-control" id="idade_animal" name="idade_animal" onfocusout="validaIdadeAnimal()" required>
+								<option value="" selected hidden >---</option>
+								<option value="Indefinida">Não Sei</option>
+								<option value="Filhote"> Filhote (- 6 Meses)</option>
+								<option value="Jovem">Jovem (7 Meses à 2 Anos)</option>
+								<option value="Adulto">Adulto (3 anos à 8 Anos)</option>
+								<option value="Idoso">Idoso (+ 9 Anos)</option>
+							</select>
+							<span id="erroIdadeA" style="color: red;"></span>
+						</div>
+						<div class="form-group col-md-4">
+							<label>Espécie </label>&emsp;&emsp;<br>
+							<select class="form-control" name="especie" id="especie" onfocusout="validaEspecieAnimal()" required>
+								<option value="" selected hidden >---</option>
+								<option value="Gato">Gato</option>
+								<option value="Cachorro">Cachorro </option>
+							</select>
+							<span id="erroEspecieA" style="color: red;"></span>
+						</div>
+				</div>
+				<div class="form-row">
+						<div class="form-group col-md-2">
+							<label>Sexo </label><br>
+							<input type="radio" id="sexo_animal" name="sexo_animal" value="Fêmea" onfocusout="validaSexoAnimal()" required />Fêmea&ensp;
+							<input type="radio" id="sexo_animal" name="sexo_animal" value="Macho" onfocusout="validaSexoAnimal()" required />Macho
+						</div>
+						<div class="form-group col-md-4">
+								<label>Raça </label>
+								<input class="form-control" type="text" id="raca" name="raca" style="text-transform: capitalize;" onfocusout="validaRacaAnimal()" placeholder="Raça" required />
+								<span id="erroRacaA" style="color: red;"></span>
+						</div>
+						<div class="form-group col-md-4">
+							<label>Cor </label>
+							<input class="form-control" type="text" id="cor" name="cor" style="text-transform: capitalize;" onfocusout="validaCorAnimal()" placeholder="Cor" required />
+							<span id="erroCorA" style="color: red;"></span>
+						</div>
+						<div class="form-group col-md-2">
+							<label>Porte </label>
+							<select class="form-control" name="porte" id="porte" onfocusout="validaPorteAnimal()" required>
+								<option value="" selected hidden >---</option>
+								<option value="Mini">Mini/Toy</option>
+								<option value="Pequeno">Pequeno</option>
+								<option value="Médio">Médio</option>
+								<option value="Grande">Grande</option>
+								<option value="Gigante">Gigante</option>
+							</select>
+							<span id="erroPorteA" style="color: red;"></span>
+						</div>
+				</div>
+				<div class="form-row">
+							<label>Foto</label>
+							<input class="form-control" type="file" name="foto_animal" required /></br>
+				</div>
+				<div class="form-row">
+							<label>Observações </label>
+							<textarea class="form-control" id="observacao_animal" name="Observacao_animal" placeholder="Conte um pouco mais sobre este animal, como sugestão pode ser o que ele gosta, alguma mania, ou até onde o encontrou." required></textarea>
+				</div>
+						<p>
+							<label style="display: none" id="label">Tratamentos</label>
+							<div id="tratamento_input"></div></br>
+						</p>
+				<div class="form-group" align="right">
+					<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalAdicionarTratamento">Adicionar Tratamento</button>
+					<input type="reset" class="btn btn-danger" value="Limpar" />
+					<input type="submit" value="Confirmar" class="btn btn-primary" />
+				</div>
 			</form>
-		</div>
+		</div><br>
 		
 		<?php
 			include ('rodape.inc');
@@ -99,23 +119,21 @@
         <div class="modal" id="modalAdicionarTratamento" tabindex="-1" role="dialog">
             <div class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" style="background-color: gold;">
                   <h5 class="modal-title" id="exampleModalLabel">Adicionar Tratamento</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-						<div class="row">
-								<p>
-									Data Tratamento: 
-									<input type="date" id="data_tratamento" name="data_tratamento" required />
-								</p>
-								<p>
-									Observações:
-									<textarea id="observacao_tratamento" name="observacao_tratamento" required></textarea>
-								</p>
-								<select id="tratamento" name="tratamento">
+						<div class="form-row">
+							<div class="form-group col-md-6">
+									<label>Data Tratamento </label><br>
+									<input class="form-control" type="date" id="data_tratamento" name="data_tratamento" required />
+							</div>
+							<div class="form-group col-md-6">
+								<label>Tipo Tratamento </label><br>
+								<select class="form-control" id="tratamento" name="tratamento">
 									<option value="" selected="selected">Selecione o Tratamento</option>
 									<?php
 										include("cabecalho_conexao.php");
@@ -138,9 +156,16 @@
 									?>
 									
 									</select>
+									</div>
+								</div>
+									<div class="form-row">
+										<label>Observações </label><br>
+										<textarea class="form-control" id="observacao_tratamento" name="observacao_tratamento" required></textarea>
+									</div><br><br>
 									
+									<div class="form-group" align="right">
 									 <button type="button" class="btn btn-primary" id="adicionar">+ Adicionar</button>
-												
+									</div>
 							</div>
 					</div>
             </div>

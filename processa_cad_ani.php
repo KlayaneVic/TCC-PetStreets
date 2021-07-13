@@ -56,33 +56,21 @@
 			$idade_animal = $_POST["idade_animal"];
 			$obs_animal = $_POST["Observacao_animal"];
 			
-			if($especie == 1){
-				$especie = "Gato";
-			} else if($especie ==  2){
-				$especie = "Cachorro";
-			}
-			
-			if($sexo == "f"){
-				$sexo = "Fêmea";
-			} else{
-				$sexo = "Macho";
-			}
-			
 			include ("cabecalho_conexao.php");
 			
 			$texto = null;
 			
 			// Adicionando informações no banco
-			$SQL = "INSERT INTO animal(nome, especie, raca, cor, porte, sexo, idade, observacoes, foto, usuario_cadastro)
-					VALUES ('$nome_animal', '$especie', '$raca', '$cor', '$porte', '$sexo', $idade_animal, '$obs_animal', 
+			$SQL = "INSERT INTO animal(nome_animal, especie, raca, cor, porte, sexo, idade, observacoes, foto_animal, usuario_cadastro)
+					VALUES ('$nome_animal', '$especie', '$raca', '$cor', '$porte', '$sexo', '$idade_animal', '$obs_animal', 
 					'$nome_foto_animal', $id_usuario)";
 				
 			// Salvando no banco
 			$query = mysqli_query($con, $SQL);
 			
 			// Selecionando todos os campos do animal para pegar seu id porque ele é auto_increment
-			$SQL = "SELECT id FROM animal WHERE usuario_cadastro = $id_usuario and nome = '$nome_animal'
-			and idade = $idade_animal and observacoes = '$obs_animal' and cor = '$cor' and porte = '$porte' and especie = '$especie' and sexo = '$sexo'
+			$SQL = "SELECT id FROM animal WHERE usuario_cadastro = $id_usuario and nome_animal = '$nome_animal'
+			and idade = '$idade_animal' and observacoes = '$obs_animal' and cor = '$cor' and porte = '$porte' and especie = '$especie' and sexo = '$sexo'
 			and raca = '$raca'";	
 			$dados_recuperados = mysqli_query($con, $SQL);
 			if ($dados_recuperados){
@@ -97,22 +85,25 @@
 				$SQL = "INSERT INTO animal_tratamento(idAnimal, idTratamento, dataTratamento, observacao)
 				VALUES "; 
 				for ($i=0; $i < $_SESSION['i']; $i++){
-					$id_tratamento = $_SESSION["id_tratamento_$i"];
-					$data_tratamento = $_SESSION["tratamento_data_$i"];
-					$obs_tratamento = $_SESSION["tratamento_obs_$i"];
-					
-					if ($i < $_SESSION['i']-1) {
-						$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento'),";
-					}
-					else {
-						$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento');";
-					}
-				} 
+					if ($_POST["hidden_$i"] == 0){
+						$id_tratamento = $_SESSION["id_tratamento_$i"];
+						$data_tratamento = $_SESSION["tratamento_data_$i"];
+						$obs_tratamento = $_SESSION["tratamento_obs_$i"];
+						
+						if ($i < $_SESSION['i']-1) {
+							$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento'),";
+						}
+						else {
+							$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento');";
+						}
+					} 
+				
+				}
 			}
-			
-			echo "<h2>$nome_animal Cadastrado(a) com Sucesso!</h2>
-				  <p>Agora já pode visualizá-lo em sua lista de Animais!!</p>
-			";
+			echo ("<script language='JavaScript'>
+									window.alert('$nome_animal Cadastrado(a) com Sucesso! Agora já pode visualizá-lo em sua lista de Animais!!')
+									window.location.href='cadastro_animais.php';
+				  </script>");
 			
 			include ('rodape_conexao.php');
 			include ('rodape.inc');
