@@ -19,6 +19,5 @@ $(document).ready(function() {
 function remover_linha(botao) {
 		var button_id = $(botao).attr("value");
 		$('#linha'+ button_id +'').remove();
-		//$('#escondido'+button_id+'').val(1);
-		document.getElementById('escondido'+button_id+'').value = 1;
+		document.getElementById('escondido_'+button_id+'').value = 1;
 };

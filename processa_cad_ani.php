@@ -82,30 +82,24 @@
 			
 			// Pegando os dados dos inputs criados para armazenamento no banco 
 			if ($_SESSION['i'] != 0){
-				$SQL = "INSERT INTO animal_tratamento(idAnimal, idTratamento, dataTratamento, observacao)
-				VALUES "; 
 				for ($i=0; $i < $_SESSION['i']; $i++){
 					if ($_POST["hidden_$i"] == 0){
 						$id_tratamento = $_SESSION["id_tratamento_$i"];
 						$data_tratamento = $_SESSION["tratamento_data_$i"];
 						$obs_tratamento = $_SESSION["tratamento_obs_$i"];
-						
-						if ($i < $_SESSION['i']-1) {
-							$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento'),";
-						}
-						else {
-							$SQL .= "($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento');";
-						}
+						$SQL = "INSERT INTO animal_tratamento(idAnimal, idTratamento, dataTratamento, observacao)
+								VALUES ($id_animal, $id_tratamento, '$data_tratamento', '$obs_tratamento');"; 
+						$query = mysqli_query($con, $SQL);
 					} 
 				
 				}
 			}
+			
 			echo ("<script language='JavaScript'>
 									window.alert('$nome_animal Cadastrado(a) com Sucesso! Agora já pode visualizá-lo em sua lista de Animais!!')
 									window.location.href='cadastro_animais.php';
 				  </script>");
 			
-			include ('rodape_conexao.php');
 			include ('rodape.inc');
 			
 		?> 

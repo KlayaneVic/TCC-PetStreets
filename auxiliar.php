@@ -38,9 +38,9 @@
                             $id = $result['id'];
 							$categoria = $result['categoria'];
                             $input ="<p id='linha". $i ."'>
-										Tipo Tratamento: <input type='text' id='$id' name='tratamento_inp_".$i."' value='$nome - $categoria' disabled />
-										Data Tratamento: <input type='date' id='$id' name='tratamento_data_".$i."' value='$parametro2' disabled />
-										Observações do Tratamento: <input type='text' id='$id' name='tratamento_obs_".$i."' value='$parametro3' disabled />
+										Tipo Tratamento: <input type='text' name='tratamento_inp_".$i."' value='$nome - $categoria' disabled />
+										Data Tratamento: <input type='date' name='tratamento_data_".$i."' value='$parametro2' disabled />
+										Observações do Tratamento: <input type='text' name='tratamento_obs_".$i."' value='$parametro3' disabled />
 										<button id='remover".$i."' class='btn btn-danger' value='".$i."' onclick='remover_linha(this);'>Remover</button>
 									</p><br>
 										<input type='hidden' id='escondido_".$i."' name='hidden_".$i."' value='0' />
