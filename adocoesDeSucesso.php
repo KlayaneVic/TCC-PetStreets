@@ -69,16 +69,12 @@
 								  </div></div>
 							';
 						   }
-                        }
-                    }else{
-						echo '
-						<div class="container">
-							<div class="row">
-								<h5>Ainda não há descrição Recebida!!</h5>
-							</div>
-						</div>
-						';
-					}
+                        }else{
+							echo '
+								<br><br><h6 align="center" style="border-radius: 5em; background-color: gold; padding: 1em 27em 1em 27em; margin-left: 5em; margin-right: 5em; margin-bottom: 15em;">Ainda não há descrição recebida!!.</h6><br><br>		
+							';
+						}
+                    }
 			echo '</div><br>';
 		?>
 		<?php

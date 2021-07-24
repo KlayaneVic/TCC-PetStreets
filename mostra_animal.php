@@ -33,9 +33,10 @@
     $id_animal = $_GET['animal'];
 	$texto = null;
     $SQL = "SELECT a.*, u.*
-				FROM animal a
-					INNER JOIN usuario u ON a.usuario_cadastro = u.id_usuario and a.id = $id_animal";
-			
+				FROM animal a INNER JOIN usuario u on a.usuario_cadastro = u.id_usuario 
+					 WHERE a.id = $id_animal
+			";
+							
     $dados_recuperados = mysqli_query($con, $SQL);
 	$resultado =  null;
 
@@ -77,9 +78,34 @@
 							<p class="card-text"><b>Cidade:</b> '.$resultado["cidade"].', Bairro: '.$resultado["bairro"].' </p>
 							<h5 style="color: gold;"><b>Observações do Publicante sobre o Animal</b></h5>
 							<p class="card-text" align="justify">'.$resultado["observacoes"].' </p>
-					</div>';
-            }
-        }
+							';
+							}
+							}
+							
+							
+							$SQL = "SELECT ta.*, tp.*
+										FROM animal a 
+											INNER JOIN animal_tratamento ta ON a.id = ta.idAnimal 
+											INNER JOIN tipo_tratamento tp ON ta.idTratamento=tp.id 
+												WHERE a.id = $id_animal
+							";
+							
+							echo '<h5 style="color: gold;"><b>Tratamentos do Animal</b></h5>';
+							$dados_recuperados = mysqli_query($con, $SQL);
+							if($dados_recuperados){
+								if(mysqli_num_rows($dados_recuperados) > 0){
+									while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
+										echo '
+											<p class="card-text"><b>('.$resultado["dataTratamento"].')</b> '.$resultado["nome"].' - '.$resultado["categoria"].'</p>
+											<p class="card-text" align="justify"> '.$resultado["observacao"].' </p>
+										';
+									}
+								}else{
+									echo '<p class="card-text"> Este Animal não Possui Tratamentos</p>';
+								}
+							}	
+								
+					echo '</div>';
 		echo '
 			</div>
 			</div>

@@ -26,24 +26,29 @@
 		?>
 		
 		<nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Suas listas de animais</h5>
+			<h5>Suas Listas de Animais</h5>
 		</nav>
 		<br><br>
 		<?php
 			include('cabecalho_conexao.php');
 		?>
 		
-		<h5 align="center">Lista de Animais Cadastrados</h5>
+		<h5 align="center">Seus Animais Disponiveis para Adoção</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
-				$SQL = "SELECT * FROM animal WHERE usuario_cadastro = $id_usuario and status = 0 ORDER BY id DESC";
+				$SQL = "SELECT a.*, u.*
+							FROM animal a
+								INNER JOIN usuario u ON a.usuario_cadastro = u.id_usuario 
+									WHERE u.id_usuario = $id_usuario AND a.status = 0 ORDER BY a.id DESC
+				
+						";
 				$dados_recuperados = mysqli_query($con, $SQL);
 				
 					if($dados_recuperados){
 						if(mysqli_num_rows($dados_recuperados) > 0){
 							$texto = null;
 							echo '
-							<div class="conteiner" align="center" enctype="multipart/form-data" style="overflow-y: auto; height: 35em; margin: 0em 5em 2em 5em;">
+							<div class="conteiner" align="center" enctype="multipart/form-data" style="background-color: #FCF6A8; border-radius: 2em; overflow-y: auto; height: 35em; margin: 0em 5em 2em 5em;">
 							<table style="border-bottom: 10px solid gold;">
 								<thead  align="center" bgcolor="gold">
 									<tr>
@@ -103,17 +108,22 @@
 			?>
 			<br><br><br>
 		
-		<h5 align="center">Lista de Animais Adotados</h5>
+		<h5 align="center">Seus Animais que Foram Adotados</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
-				$SQL = "SELECT * FROM animal WHERE usuario_cadastro = $id_usuario and status = 1 ORDER BY id DESC";
+				$SQL = "SELECT a.*, u.*
+							FROM animal a
+								INNER JOIN usuario u ON a.usuario_cadastro = u.id_usuario 
+									WHERE u.id_usuario = $id_usuario AND a.status = 1 ORDER BY a.id DESC
+				
+						";
 				$dados_recuperados = mysqli_query($con, $SQL);
 				
 					if($dados_recuperados){
 						if(mysqli_num_rows($dados_recuperados) > 0){
 							$texto = null;
 							echo '
-							<div class="conteiner" align="center" enctype="multipart/form-data" style="overflow-y: auto; height: 35em; margin: 0em 5em 0em 5em;">
+							<div class="conteiner" align="center" enctype="multipart/form-data" style="background-color: #FCF6A8; border-radius: 2em; overflow-y: auto; height: 35em; margin: 0em 5em 0em 5em;">
 								<table style="border-bottom: 10px solid gold;">
 								<thead  align="center" bgcolor="gold">
 									<tr>

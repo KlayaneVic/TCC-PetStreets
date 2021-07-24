@@ -19,5 +19,11 @@ $(document).ready(function() {
 function remover_linha(botao) {
 		var button_id = $(botao).attr("value");
 		$('#linha'+ button_id +'').remove();
+		$('#br'+ button_id +'').remove();
 		document.getElementById('escondido_'+button_id+'').value = 1;
+		var tratamentos = document.getElementsByClassName('paragrafo_trat');
+		if (tratamentos.length == 0){
+			$('#label').hide();
+		}
+		
 };

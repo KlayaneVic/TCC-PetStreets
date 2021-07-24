@@ -204,6 +204,32 @@
 				</div>
 
                 <input type="hidden" id="id" name="id" value="<?php echo $id_animal ?>" />
+				<?php
+					$SQL = "SELECT ta.*, tp.*
+										FROM animal a 
+											INNER JOIN animal_tratamento ta ON a.id = ta.idAnimal 
+											INNER JOIN tipo_tratamento tp ON ta.idTratamento=tp.id 
+												WHERE a.id = $id_animal";
+					$dados_recuperados = mysqli_query($con, $SQL);
+							if($dados_recuperados){
+								if(mysqli_num_rows($dados_recuperados) > 0){
+									echo "<label>Tratamentos</label>";
+									while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
+										$nome = $resultado['nome'];
+										$cat = $resultado['categoria'];
+										$data = $resultado['dataTratamento'];
+										$obs = $resultado['observacao'];
+										echo "
+											<p align='center'>
+												Tipo: <input type='text' name='tratamento_inp' value='$nome - $cat' disabled />
+												Data: <input type='date' name='tratamento_data' value='$data' />
+												Observações: <input type='text' name='tratamento_obs' value='$obs' />
+											</p><br>
+										";
+									}
+								}
+							}
+				?>
 				<br><br><div class="form-group" align="right">
 					<input type="reset" class="btn btn-danger" value="Limpar" />
 					<input type="submit" value="Confirmar" class="btn btn-primary" />

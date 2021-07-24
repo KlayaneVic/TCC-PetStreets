@@ -90,7 +90,7 @@
             <p class="lead" align="justify"><i>"Adotar um animal é uma grande responsabilidade, e não é só porque você precisará cuidar dele em casa. A adoção é capaz de salvar a vida de um bichinho que poderia estar nas ruas, abandonado, morrendo de fome e possivelmente sofrendo de maus tratos. A maioria das ONGs e clínicas veterinárias não podem sustentar um animal por muito tempo, não tendo condições de manter a quantidade de cães e gatos desabrigados que frequentemente recebem. Além de levar um novo companheiro para a casa, você está salvando a vida de um grande amigo e dando a ele a oportunidade de receber amor em um lar seguro." <br><br> - Referência (https://www.casapraticaqualita.com.br/noticia/6-motivos-para-adotar-um-animal-de-estimacao_a1323/1)</i></p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="img/quadro1.png" data-holder-rendered="true">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px; border-radius: 2em;" src="img/quadro1.png" data-holder-rendered="true">
           </div>
         </div>
 
@@ -105,7 +105,7 @@
 			</i></p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="img/quadro2.png" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="img/quadro2.png" data-holder-rendered="true" style="width: 500px; height: 500px; border-radius: 2em;">
           </div>
         </div>
 
@@ -118,13 +118,13 @@
 			</i></p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="img/quadro3.gif" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="img/quadro3.gif" data-holder-rendered="true" style="width: 500px; height: 500px; border-radius: 2em;">
           </div>
         </div>
 
         <hr class="featurette-divider">
       </div>
-    </main>
+    </main><br>
 		<?php
 			include ('rodape.inc');
 		?>

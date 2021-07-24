@@ -31,11 +31,18 @@
 			<div class="container">
 				<form action="processa_log_usu.php" method="POST" class="formLogin" style="background-color: gold; margin: 2em 15em 2em 15em; padding: 1em;
 				border-radius: 5em; padding: 4em; box-shadow: 2px 2px 2em #888;">
-					<div align="center"><img src="img/login.gif" style="border-radius: 2em; height: 8em; width: 30em;"></div><br>
-					<h4 align="center" style="color: purple;"> ------------------------ ❤ ------------------------ </h4>
-					<h5 class="text-center">Entre com o seu <b>Usuário</b> e <b>Senha</b></h5>
-					<h4 align="center" style="color: purple;"> ---------------------------------------------------- </h4>
-					
+					<div class="form-row">
+						<div align="center" class="form-group col-md-12">
+							<img src="img/login.gif" style="border-radius: 2em; height: 8em; width: 30em;">
+						</div>
+					</div><br>
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<h4 align="center" style="color: purple;"> ------------------------ ❤ ------------------------ </h4>
+							<h5 class="text-center">Entre com o seu <b>Usuário</b> e <b>Senha</b></h5>
+							<h4 align="center" style="color: purple;"> ---------------------------------------------------- </h4>
+						</div>
+					</div>
 					<div class="form-row">
 						<div class="form-group col-md-1">
                             <i class="material-icons">account_circle</i>
