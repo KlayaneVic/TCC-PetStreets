@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$_SESSION['i'] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -215,17 +216,22 @@
 								if(mysqli_num_rows($dados_recuperados) > 0){
 									echo "<label>Tratamentos</label>";
 									while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
+										$i = $_SESSION['i'];
+										$id = $resultado['id_at'];
 										$nome = $resultado['nome'];
 										$cat = $resultado['categoria'];
 										$data = $resultado['dataTratamento'];
 										$obs = $resultado['observacao'];
+										$_SESSION["id_at$i"] = $id;
 										echo "
-											<p align='center'>
-												Tipo: <input type='text' name='tratamento_inp' value='$nome - $cat' disabled />
-												Data: <input type='date' name='tratamento_data' value='$data' />
-												Observações: <input type='text' name='tratamento_obs' value='$obs' />
+											<p align='center' id='paragrafo".$i."'>
+												Tipo: <input type='text' name='tratamento_inp".$i."' value='$nome - $cat' disabled />
+												Data: <input type='date' name='tratamento_data".$i."' value='$data' />
+												Observações: <input type='text' name='tratamento_obs".$i."' value='$obs' />
+												<button class='btn btn-danger'>Remover</button>
 											</p><br>
 										";
+										$_SESSION['i']++;
 									}
 								}
 							}

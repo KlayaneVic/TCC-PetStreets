@@ -32,10 +32,19 @@
     $SQL = "UPDATE animal SET nome_animal='$Novo_nome_Animal', especie='$Nova_especie', raca='$Nova_raca', cor='$Nova_cor', 
     porte='$Novo_porte', sexo ='$Novo_sexo', idade= '$Nova_idade', observacoes='$Nova_observacoes', foto_animal='$nome_Nova_foto' WHERE id= $id_animal";
     
+	$query = mysqli_query($con, $SQL);
+	
+	if ($_SESSION['i'] != 0){
+				for ($i=0; $i < $_SESSION['i']; $i++){
+						$id_at = $_SESSION["id_at$i"];
+						$data_tratamento = $_POST["tratamento_data$i"];
+						$obs_tratamento = $_POST["tratamento_obs$i"];
+						$SQL = "UPDATE animal_tratamento SET dataTratamento='$data_tratamento', observacao='$obs_tratamento' WHERE idAnimal= $id_animal AND id_at = $id_at"; 
+						
+						$query = mysqli_query($con, $SQL);
+				}
+			}
     
-    include("rodape_conexao.php");
 	header("location:lista_animais.php");
-	
-	
     
 ?>
