@@ -91,7 +91,7 @@
 									}
 								echo "<td style='padding: 1em;' align='justify'>" . $resultado['observacoes'] . "</td>";
 								echo"<td style='padding: 1em;'> <a href='edita_animal.php?animal=$resultado[id]' <button class='btn btn-primary'>Editar</button></a></td>";
-								echo"<td style='padding: 1em;'> <a href='modifica_status_animal.php?animal=$resultado[id]' onclick='return permissao_status_animal()'><button class='btn btn-primary'>+ Confirmar Adoção</button></a></td>";
+								echo"<td style='padding: 1em;'> <a href='modifica_status_animal.php?animal=$resultado[id]' onclick='return permissao_status_animal()'><button class='btn btn-primary'>Confirmar Adoção +</button></a></td>";
 							
 							echo "</tr>";
 							

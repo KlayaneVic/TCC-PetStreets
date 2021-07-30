@@ -57,7 +57,7 @@
                             <i class="material-icons">lock</i>
                         </div>
 						<div class="form-group col-md-11">
-							<input type="text" class="form-control" name="senha_usuario" placeholder="Senha" required />
+							<input type="password" class="form-control" name="senha_usuario" placeholder="Senha" required />
 						</div>
 					</div><br>
 					<div class="form-group" align="right">

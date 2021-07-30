@@ -44,18 +44,17 @@
 		<p align="justify" style="margin-left: 10em; margin-right: 10em;"> Com seu <b>cadastro feito</b>, você já faz parte do nosso banco de usuários e poderá efetuar o login, <b>ao lado do botão de cadastrar</b>, com seu email e senha.<br>
 		</p>
 		<h5 style="margin-left: 2em;">Pós Login (Usuário Logado na Plataforma):</h5>
-		<p align="justify" style="margin-left: 10em; margin-right: 10em;"> Agora <b>você já pode navegar</b> à procura de um parceiro ou cadastrar um animalzinho na seção Cadastro de animais. Lá você encontrará um formulário requerindo <b>dados de seu animal</b> e um campo de observação, após o cadastro ele <b>será listado junto com os demais animais cadastrados</b>. Você terá acesso as <b>seguintes ferramentas</b> usáveis:<br>
+		<p align="justify" style="margin-left: 10em; margin-right: 10em;"> Agora <b>você já pode navegar</b> à procura de um parceiro ou cadastrar um animalzinho. Em <b>seu canto superior direito</b> estarão todas as funções que você pode usar <b>(localizada ao lado contrário da logo, 'Perfil')</b>. Lá você encontrará:<br>
 		<ul style="margin-left: 10em; margin-right: 10em;">
 				<li>A <b>pagina inicial</b>, referida como os ultimos cadastrados, ali estarão todos os ultimos animais adicionados na plataforma e você poderá visualiza-lo já com seus respectivos dados.</li>
-				<li>Em <b>seu canto inferior direito</b> estarão todas as funções que você pode usar. </li> 
-				<li><b>Perfil de Usuário</b> - Nele estará todos os seus dados podendo ser alterados ou não, e sua quatidade de animais cadastrados ou adotados. </li> 
-				<li><b>Cadastro de Animais</b> - Pagina dirijida para o cadastro dos seus animais.</li>
-				<li><b>Lista de Animais</b> - Pagina dirijida para a visualização e edição dos seus animais cadastrados.</li>
+				<li><b>Perfil de Usuário</b> - Nele estará todos os seus dados podendo ser alterados ou não, e sua quatidade de animais cadastrados e que foram adotados. </li> 
+				<li><b>Cadastro de Animais</b> - Pagina dirijida para o cadastro dos seus animais. Nesta seção você encontrará um formulário requerindo dados de seu animal e um botão para adicionar seus tratamentos, após o cadastro ele será listado junto com os demais animais cadastrados.</li>
+				<li><b>Lista de Animais</b> - Pagina dirijida para a visualização e edição dos seus animais cadastrados, tanto quanto os seus animais que já foram adotados.</li>
 				<li><b>Pesquisa Filtrada</b> - Pagina dirijida para a pesquisa especifica do animal, ou seja, se você que que seja femea/macho ou que tenha a pelagem amarela, etc.</li>
 				<li>E claro, a <b>funcionalidade de sair</b> da sua conta.</li>
 			</ul>
 		<p align="justify" style="margin-left: 10em; margin-right: 10em;">
-			Na hora de adotar também é bem simples, mas na hora de cadastrar o animal será <b>solicitada uma pesquisa</b> para saber se é uma pessoa <b>adaqueada</b> para esse tipo de responsabilidade e se o animal está em bom estado para ser adotado. Abaixo falamos um pouco sobre estas requisições, <b>verifique-as se estão de acordo</b>. Esperamos muito que sim, qualquer duvida entre em contato pelo nosso email e não desanime pois o final pode ser cheio de alegria.</p>
+			Na hora de adotar também é bem simples, ao cadastrar o animal será <b>possivel a adição</b> de tratamentos aplicados ao <b>animal referido</b> para que um futuro adotante saiba que este animal foi vacinado ou não. Caso tenha aplicado alguma vacina neste animal, ou castrou você pode adiciona-lo e caso não tenha feito nada apenas prossiga com o cadastro, pois mais a frente poderá adicionar tratamentos a ele. Abaixo falamos um pouco sobre reflexões para a adoção, <b>verifique-as se estão de acordo</b>. Esperamos muito que sim, qualquer duvida entre em contato pelo nosso email e não desanime pois o final pode ser cheio de alegria.</p>
 		</p>
 		<h5 style="margin-left: 2em;">Algumas Reflexões antes da adoção:</h5><br/>
 		

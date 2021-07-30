@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$_SESSION['i'] = 0;
+	$_SESSION['j'] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,6 +15,7 @@
     	<script src="js/popper.min.js"></script>
     	<script src="js/bootstrap.min.js"></script>
 		<script src="js/valida.js"></script>
+		<script src="js/arquivo_externo.js"></script>
 	
 		<style>
 			body{
@@ -201,7 +203,7 @@
 				</div>
 				<div class="form-row">
 					<label>Foto</label>
-					<input class="form-control" type="file" id="nova_foto_animal" name="nova_foto_animal" required /></br>
+					<input class="form-control" type="file" id="nova_foto_animal" name="nova_foto_animal" /></br>
 				</div>
 
                 <input type="hidden" id="id" name="id" value="<?php echo $id_animal ?>" />
@@ -214,7 +216,7 @@
 					$dados_recuperados = mysqli_query($con, $SQL);
 							if($dados_recuperados){
 								if(mysqli_num_rows($dados_recuperados) > 0){
-									echo "<label>Tratamentos</label>";
+									echo "<label id='label_ant'>Tratamentos (Antigos)</label>";
 									while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
 										$i = $_SESSION['i'];
 										$id = $resultado['id_at'];
@@ -224,19 +226,25 @@
 										$obs = $resultado['observacao'];
 										$_SESSION["id_at$i"] = $id;
 										echo "
-											<p align='center' id='paragrafo".$i."'>
+											<p align='center' id='paragrafo".$i."' class='paragrafo_trat_ant'>
 												Tipo: <input type='text' name='tratamento_inp".$i."' value='$nome - $cat' disabled />
 												Data: <input type='date' name='tratamento_data".$i."' value='$data' />
 												Observações: <input type='text' name='tratamento_obs".$i."' value='$obs' />
-												<button class='btn btn-danger'>Remover</button>
-											</p><br>
+												<button type='button' id='remover_ant".$i."' class='btn btn-danger' value='".$i."' onclick='remover_linha_ant(this);'>Remover</button>
+											</p>
+											<input type='hidden' id='escondido_ant".$i."' name='hidden_ant".$i."' value='0' />
 										";
 										$_SESSION['i']++;
 									}
 								}
 							}
 				?>
+						<p>
+							<label style="display: none" id="label_nv">Tratamentos (Novos)</label><br>
+							<div id="tratamento_input_nv"></div>
+						</p>
 				<br><br><div class="form-group" align="right">
+					<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalAdicionarNvTratamento">Adicionar Tratamento</button>
 					<input type="reset" class="btn btn-danger" value="Limpar" />
 					<input type="submit" value="Confirmar" class="btn btn-primary" />
 				</div>
@@ -247,5 +255,60 @@
             include ("rodape_conexao.php");
 			include ("rodape.inc");
         ?>
+		 <!-- Modal Adicionar -->
+        <div class="modal" id="modalAdicionarNvTratamento" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: gold;">
+                  <h5 class="modal-title" id="exampleModalLabel">Adicionar Tratamento</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+						<div class="form-row">
+							<div class="form-group col-md-6">
+									<label>Data Tratamento </label><br>
+									<input class="form-control" type="date" id="data_tratamento_nv" name="data_tratamento_nv" required />
+							</div>
+							<div class="form-group col-md-6">
+								<label>Tipo Tratamento </label><br>
+								<select class="form-control" id="tratamento_nv" name="tratamento_nv">
+									<option value="" selected="selected">Selecione o Tratamento</option>
+									<?php
+										include("cabecalho_conexao.php");
+										$SQL = "SELECT * FROM tipo_tratamento";
+										$dados_recuperados = mysqli_query($con, $SQL);
+										if(mysqli_num_rows($dados_recuperados) > 0){
+										
+											while (($resultado = mysqli_fetch_assoc($dados_recuperados)) != null) {
+
+												$nome = $resultado['nome'];
+												$id = $resultado['id'];
+												$categoria = $resultado['categoria'];
+												echo "<option value='$id'>$categoria - $nome</option>";
+											}
+										}else {
+											echo "Nao possui Tratamento. <br>";
+										}
+
+										include("rodape_conexao.php");
+									?>
+									
+									</select>
+									</div>
+								</div>
+									<div class="form-row">
+										<label>Observações </label><br>
+										<textarea class="form-control" id="observacao_tratamento_nv" name="observacao_tratamento_nv" required></textarea>
+									</div><br><br>
+									
+									<div class="form-group" align="right">
+									 <button type="button" class="btn btn-primary" id="adicionar_nv">+ Adicionar</button>
+									</div>
+							</div>
+					</div>
+            </div>
+        </div> 
     </body>
 </html>
