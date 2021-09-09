@@ -30,6 +30,22 @@ $(document).ready(function() {
 				});
 		}
 	});
+	
+	$('#adicionar_nv_adm').click(function() {
+		var id = $('#tratamento_nv').val();
+		var data = $('#data_tratamento_nv').val();
+		var observacoes = $('#observacao_tratamento_nv').val();
+		
+		if (id != "" && data != "" && observacoes != ""){
+			$('#label_nv').show();
+			
+			$.post('auxiliar_nv_adm.php', 
+				{parametro: id, parametro2: data, parametro3: observacoes},
+				function (dado, status){
+					$('#tratamento_input_nv').append(dado);
+				});
+		}
+	});
 });
 
 function remover_linha(botao) {

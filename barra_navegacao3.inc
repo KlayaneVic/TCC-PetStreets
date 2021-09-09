@@ -14,11 +14,9 @@
 			<div class="column col-md-3">
 				<select name="perfil" onchange="location = this.value;" style="background-color: black; color: gold; border-radius: 5em; margin-top: 3.5em;">
 					<option selected hidden >Perfil</option>
-					<option value="home_usuario.php">Pagina Inicial</option>
-					<option value="perfil_usuario.php">Usuário (Seus Dados)</option>
-					<option value="cadastro_animais.php">Cadastrar Animais</option>
-					<option value="lista_animais.php">Sua Lista de Animais</option>
-					<option value="pesquisa_animais.php">Pesquisar Animais</option>
+					<option value="perfil_adm.php">Perfil ADM (Seus Dados)</option>
+					<option value="lista_usuarios.php">Edição de Usuários</option>
+					<option value="lista_animais_adm.php">Edição de Animais</option>
 					<option value="sair.php">Sair</option>
 				</select><br><br></b>
 			</div>

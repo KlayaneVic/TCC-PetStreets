@@ -38,8 +38,8 @@
 		</nav>
 		
 		<br><h5 style="margin-left: 2em;">Afinal, do que se trata o PetStreets?</h5>
-		<p align="justify" style="margin-left: 10em; margin-right: 10em;">O Sistema PetStreets, tem por finalidade ajudar animais que estão em situações de rua abandonados, com fome, sujos e doentes a encontrar um dono e respectivamente bom lar. 
-		Nossa proposta é fornecer um local de armazenamento e interação para que haja as possiveis adoções, e com isso, nós desenvolvedores criamos este site com esta finalidade.</p>
+		<p align="justify" style="margin-left: 10em; margin-right: 10em;">O <b>Sistema PetStreets</b>, tem por finalidade <b>ajudar animais que estão em situações de rua abandonados, com fome, sujos e doentes</b> a encontrar um <b>dono</b> e respectivamente <b>bom lar</b>. 
+		Nossa proposta é <b>fornecer um local de armazenamento</b> e <b>interação</b> para que haja as possiveis adoções, e com isso, nós desenvolvedores <b>criamos este site com esta finalidade</b>.</p>
 	
 		<div style="background-color: lightgray; width: 50em; height: 25em; margin-left: 17em; border-radius: 40em;">
 		   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

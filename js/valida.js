@@ -358,3 +358,43 @@ function permissao_divulga_animal() {
         return confirmacao;
     }
 }
+
+function permissao_exclui_animal(){
+    var confirmacao = confirm("Deseja mesmo excluir este animal?");
+    if(!confirmacao){
+        window.location.href ="lista_animais_adm.php";
+        return false;
+    }else{
+        return confirmacao;
+    }
+}
+
+function permissao_divulga_adm() {
+	var confirmacao = confirm("Esta permissão fará com que o animal do usuario apareça na tela de 'Adotados com Sucesso', deseja comfirmar? Clique em OK.");
+    if(!confirmacao){
+        window.location.href ="lista_animais_adm.php";
+        return false;
+    }else{
+        return confirmacao;
+    }
+}
+
+function permissao_remove_adm () {
+	var confirmacao = confirm("Esta remoção fará com que o animal do usuario saia da tela de 'Adotados com Sucesso', deseja comfirmar? Clique em OK.");
+    if(!confirmacao){
+        window.location.href ="lista_animais_adm.php";
+        return false;
+    }else{
+        return confirmacao;
+    }
+}
+
+function permissao_excluir_usuario(){
+    var confirmacao = confirm("Tem certeza que deseja excluir?");
+    if(!confirmacao){
+        window.location.href ="lista_usuarios.php";
+        return false;
+    }else{
+        return confirmacao;
+    }
+}

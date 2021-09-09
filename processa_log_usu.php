@@ -23,7 +23,7 @@
 								$identificador_usu = $resultado['adm']; 
 								
                                 if ($resultado['adm'] == 1) {
-									header("Location:home_adm.php"); 
+									header("Location:perfil_adm.php"); 
 								}else {
 									header("Location:perfil_usuario.php"); 
 								}
