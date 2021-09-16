@@ -86,6 +86,7 @@
 						  <button type="submit" class="btn btn-primary">Confirmar</button>
 						</div>
 					</div>
+					<input type="hidden" name="id" value="<?php echo $resultado['id_usuario']; ?>" />
 				</form>
 			</div>
 	</body>

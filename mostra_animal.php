@@ -40,7 +40,8 @@
     $dados_recuperados = mysqli_query($con, $SQL);
 	$resultado =  null;
 
-	echo '<div class="card" style="max-width: 70em; background-color: black; margin-left: 16em; border-radius: 50px; box-shadow: 2px 2px 2em #888; border: none; margin: 2em; margin-left: 7.5em; padding: 1em;">
+	echo '<br><br><div class="card" style="background-color: black; border-radius: 50px; margin: 0 auto;
+width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
     <div class="row no-gutters">';
 
 		if($dados_recuperados){
@@ -108,7 +109,7 @@
 					echo '</div>';
 		echo '
 			</div>
-			</div>
+			</div><br><br>
 		';
    
 ?>

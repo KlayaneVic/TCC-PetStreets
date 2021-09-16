@@ -58,7 +58,7 @@
 		</p>
 		<h5 style="margin-left: 2em;">Algumas Reflexões antes da adoção:</h5><br/>
 		
-		<div style="background-color: lightgray; width: 50em; height: 25em; margin-left: 17em; border-radius: 40em;">
+		<div style="background-color: lightgray; margin: 0 auto; width: 50%; height: 25em; border-radius: 40em;">
 		   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			  <ol class="carousel-indicators">
 				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

@@ -41,7 +41,8 @@
 		<p align="justify" style="margin-left: 10em; margin-right: 10em;">O <b>Sistema PetStreets</b>, tem por finalidade <b>ajudar animais que estão em situações de rua abandonados, com fome, sujos e doentes</b> a encontrar um <b>dono</b> e respectivamente <b>bom lar</b>. 
 		Nossa proposta é <b>fornecer um local de armazenamento</b> e <b>interação</b> para que haja as possiveis adoções, e com isso, nós desenvolvedores <b>criamos este site com esta finalidade</b>.</p>
 	
-		<div style="background-color: lightgray; width: 50em; height: 25em; margin-left: 17em; border-radius: 40em;">
+		<div style="background-color: lightgray; width: 50em; height: 25em; margin: 0 auto;
+width: 50%; border-radius: 40em;">
 		   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			  <ol class="carousel-indicators">
 				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

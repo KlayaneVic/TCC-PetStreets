@@ -43,13 +43,13 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item">
-            <img class="first-slide" src="img/capa1.png" alt="First slide">
+            <img class="first-slide" src="img/capa1.png" width="100%" alt="First slide">
           </div>
           <div class="carousel-item active">
-            <img class="second-slide" src="img/capa1.png" alt="Second slide">
+            <img class="second-slide" src="img/capa1.png" width="100%" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="img/capa2.png" alt="Third slide">
+            <img class="third-slide" src="img/capa2.png" width="100%" alt="Third slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

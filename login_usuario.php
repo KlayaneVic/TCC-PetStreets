@@ -38,9 +38,9 @@
 					</div><br>
 					<div class="form-row">
 						<div class="form-group col-md-12">
-							<h4 align="center" style="color: purple;"> ------------------------ ❤ ------------------------ </h4>
+							<h4 align="center" style="color: purple;"> &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; ❤ &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; </h4>
 							<h5 class="text-center">Entre com o seu <b>Usuário</b> e <b>Senha</b></h5>
-							<h4 align="center" style="color: purple;"> ---------------------------------------------------- </h4>
+							<h4 align="center" style="color: purple;"> &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;</h4>
 						</div>
 					</div>
 					<div class="form-row">

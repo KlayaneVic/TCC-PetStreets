@@ -13,6 +13,7 @@
 				}
 		}
     $id_admin = $_SESSION["id_usuario"];
+	$id = $_POST["id"];
     $nomeEdit = $_POST['novo_nome_usuario'];
     $telefoneEdit = $_POST['novo_telefone_usuario'];
     $cidadeEdit = $_POST['nova_cidade_usuario'];
@@ -33,10 +34,10 @@
 										if ($id != $resultado['id_usuario']){
 											echo ("<script language='JavaScript'>
 											window.alert('E-mail já existente, tente formular outro $id_usuario!!')
-											window.location.href='lista_usuario.php';
+											window.location.href='lista_usuarios.php';
 											</script>");
 										}else{
-											$SQL = verificaAttUsu_Email($id_usuario, $nome_fotoEdit, $senhaEdit, $emailEdit, $bairroEdit, $cidadeEdit, $telefoneEdit, $nomeEdit);	
+											$SQL = verificaAttUsu_Email($id, $nome_fotoEdit, $senhaEdit, $emailEdit, $bairroEdit, $cidadeEdit, $telefoneEdit, $nomeEdit);	
 										}
 									}
 								}else{
