@@ -111,44 +111,45 @@
                 </div>
                 <div class="modal-body">
                     <form action="altera_usuario.php" method="POST" enctype="multipart/form-data">
+						<small class="form-text text-muted">Campos marcados com * são obrigatorios</small>
+						<small id="emailHelp2" class="form-text text-muted">Todos os dados, exceto senha, email e foto, são visiveis a outros usuários.</small><br>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>Nome Completo </label><br>
+									<label>*Nome Completo </label><br>
 									<input class="form-control" type="text" id="novo_nome" name="novo_nome" onfocusout="validaNomeAtt()" value="<?php echo $resultado['nome_usuario']; ?>" required />
 									<span id="erroNomeAtt" style="color: red;"></span>
 							</div>
 							<div class="form-group col-md-6">
-									<label for="inputPassword4">Senha </label><br>
+									<label for="inputPassword4">*Senha </label><br>
 									<input class="form-control" type="text" id="nova_senha_usuario"  name="nova_senha_usuario" onfocusout="validaSenhaAtt()" value="<?php echo $resultado['senha']; ?>" required />
 									<span id="erroSenhaAtt" style="color: red;"></span>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>Telefone </label><br>
+									<label>*Telefone </label><br>
 									<input class="form-control" type="text" id="novo_telefone_usuario" name="novo_telefone_usuario" onfocusout="validaTelefoneAtt()" value="<?php echo $resultado['telefone']; ?>" required />
 									<span id="erroTelefoneAtt" style="color: red;"></span>
 							</div>
 							<div class="form-group col-md-6">
-									 <label>E-mail</label><br>
+									 <label>*E-mail</label><br>
 									 <input class="form-control" type="text" id="novo_email_usuario" name="novo_email_usuario" onfocusout="validaEmailAtt()" value="<?php echo $resultado['email']; ?>" required />
 									<span id="erroEmailAtt" style="color: red;"></span>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>Cidade </label><br>
+									<label>*Cidade </label><br>
 									<input class="form-control" type="text" id="nova_cidade_usuario" name="nova_cidade_usuario"  onfocusout="validaCidadeAtt()" value="<?php echo $resultado['cidade']; ?>" required /> 
 									<span id="erroCidadeAtt" style="color: red;"></span>
 							</div>
 							<div class="form-group col-md-6">
-									<label>Bairro </label><br>
+									<label>*Bairro </label><br>
 									<input class="form-control" type="text" id="novo_bairro_usuario" name="novo_bairro_usuario" onfocusout="validaBairroAtt()" value="<?php echo $resultado['bairro']; ?>" required />
 									<span id="erroBairroAtt" style="color: red;"></span>
 							</div>
 						</div>
-						<small id="emailHelp2" class="form-text text-muted">Todos os dados, exceto senha, email e foto, são visiveis a outros usuários.</small>
-						<br><div class="form-row">
+						<div class="form-row">
 								<div class="form-group col-md-12">
 									<label>Foto </label><br>
 									<input class="form-control" type="file" id="nova_foto" name="nova_foto" />

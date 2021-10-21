@@ -25,7 +25,7 @@
                                 if ($resultado['adm'] == 1) {
 									header("Location:perfil_adm.php"); 
 								}else {
-									header("Location:perfil_usuario.php"); 
+									header("Location:home_usuario.php"); 
 								}
 								
                             }else {

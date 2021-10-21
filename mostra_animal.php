@@ -27,6 +27,7 @@
 			<h5>Animal Selecionado</h5>
 		</nav>
 		
+		<br><h5 style="margin-left: 2em;">PARABÉNS!! Parece que se interessou por este animalzinho! Para adotá-lo, entre em contato com o número do publicante fornecido abaixo! </h5>
 <?php
     include ("cabecalho_conexao.php");
 
@@ -40,7 +41,7 @@
     $dados_recuperados = mysqli_query($con, $SQL);
 	$resultado =  null;
 
-	echo '<br><br><div class="card" style="background-color: black; border-radius: 50px; margin: 0 auto;
+	echo '<br><div class="card" style="background-color: black; border-radius: 50px; margin: 0 auto;
 width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
     <div class="row no-gutters">';
 
@@ -112,13 +113,92 @@ width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
 			</div><br><br>
 		';
    
+   echo '
+   <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Que Legal! Mas antes, pense sobre as reflexões!			<small class="form-text text-muted">Quando estiver pronto, é só clicar "Entendi" na parte inferior da tela!</small></h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+			  </ol>
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <img class="d-block w-100" src="img/1.png" alt="Primeiro Slide" style="width: 50em; height: 20em;">
+				  <div class="carousel-caption d-none d-md-block">
+						<h5>Você terá mesmo o tempo necessário para cuidar?</h5>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/4.png" alt="Segundo Slide" style="width: 50em; height: 20em;">
+				  <div class="carousel-caption d-none d-md-block">
+						<h5>O lugar é adequado e seguro?</h5>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/2.png" alt="Terceiro Slide" style="width: 50em; height: 20em;">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>As suas condições financeiras coincidem para o bom cuidado?</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/3.png" alt="Terceiro Slide" style="width: 50em; height: 20em;">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Você é maior de Idade?</h5>
+						<p>Caso não seja o correto é conversar com seus pais, pois eles saberão o que fazer</p>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <img class="d-block w-100" src="img/5.png" alt="Terceiro Slide" style="width: 50em; height: 20em;">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Não desconsidere estas reflexões!!</h5>
+						<p>Elas são importantes para que haja uma adoção segura e plena.</p>
+				  </div>
+				</div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Próximo</span>
+			  </a>
+			</div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-dismiss="modal">Entendi!</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+   ';
 ?>
 	<input type="hidden" id="id" name="id" value="<?php echo $id_animal?>" />
 
-
-<?php
-		include ('rodape_conexao.php');
-		include ('rodape.inc');
-?>
+		<?php
+		$situacao_propaganda = "ok";
+		if($situacao_propaganda == "ok"){ ?>
+			<script>
+				$(document).ready(function(){
+					$('#modalExemplo').modal('show');
+				});
+			</script>
+		<?php } ?>
+		
+		<?php
+			include ('rodape_conexao.php');
+			include ('rodape.inc');
+		?>
 	</body>
 </html>

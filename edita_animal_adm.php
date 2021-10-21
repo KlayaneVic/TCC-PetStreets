@@ -52,14 +52,15 @@
 		?>
             <div class="conteiner">
 			<form action="processa_edita_ani_adm.php" method="POST" class="formCadastro" enctype="multipart/form-data" style="box-shadow: 2px 2px 2em #888; background-color: gold; margin: 2em 9em 2em 9em; border-radius: 5em; padding: 2em 5em 2em 5em;">
+				<small class="form-text text-muted">Campos marcados com * são obrigatorios</small><br>
 				<div class="form-row">
 						<div class="form-group col-md-4">
-							<label>Nome </label>
+							<label>*Nome </label>
 							<input class="form-control" type="text" id="novo_nome_animal" name="novo_nome_animal" onfocusout="validaNomeAnimalAtt()" value="<?php echo $resultado['nome_animal'];?>" required />
 							<span id="erroNomeAnimal" style="color: red;"></span>
 						</div>
 						<div class="form-group col-md-4">
-							<label>Espécie </label>&emsp;&emsp;
+							<label>*Espécie </label>&emsp;&emsp;
 							<select class="form-control" name="nova_especie" required>
 							<?php
 								if($resultado['especie'] == 'Cachorro'){
@@ -77,19 +78,19 @@
 							</select>
 						</div>
 						<div class="form-group col-md-4">
-							<label>Raça </label>
+							<label>*Raça </label>
 							<input class="form-control" type="text" id="nova_raca_animal" name="nova_raca_animal" onfocusout="validaRacaAnimalAtt()" value="<?php echo $resultado['raca'];?>" required />
 							<span id="erroRacaAtt" style="color: red;"></span>
 						</div>
 				</div>
 				<div class="form-row">
 						<div class="form-group col-md-6">
-							<label>Cor </label>
+							<label>*Cor </label>
 							<input class="form-control" type="text" id="nova_cor_animal" name="nova_cor_animal" onfocusout="validaCorAnimalAtt()" value="<?php echo $resultado['cor'];?>" required />
 							<span id="erroCorAtt" style="color: red;"></span>
 						</div>
 						<div class="form-group col-md-6">
-							<label>Porte </label>
+							<label>*Porte </label>
 							<select class="form-control" name="novo_porte_animal" id="novo_porte_animal" onfocusout="validaPorteAnimalAtt()" required>
 								<?php
 									if($resultado['porte'] == 'Mini'){
@@ -140,7 +141,7 @@
 				</div>
 				<div class="form-row">
 						<div class="form-group col-md-2">
-							<label>Sexo </label><br>
+							<label>*Sexo </label><br>
 							<?php
 								if($resultado['sexo'] == 'Macho'){
 									echo '
@@ -156,7 +157,7 @@
 							?>
 						</div>
 						<div class="form-group col-md-6">
-							<label>Idade </label>
+							<label>*Idade </label>
 							<select class="form-control" id="nova_idade_animal" name="nova_idade_animal" onfocusout="validaIdadeAnimalAtt()" required>
 								<?php
 									if($resultado['idade'] == 'Indefinida'){
@@ -205,7 +206,7 @@
 							<span id="erroIdadeAtt" style="color: red;"></span>
 							</div>
 								<div class="form-group col-md-4">
-								<label>Status</label>
+								<label>*Status</label>
 								<select class="form-control" name="novo_status">
 										<option value="" selected hidden>Status Atual</option>
 										<option value="1">Adotado</option>
@@ -214,7 +215,7 @@
 							</div>
 				</div>
 				<div class="form-row">
-					<label>Observações </label>
+					<label>*Observações </label>
 					<textarea class="form-control" id="nova_Observacoes_animal" name="nova_Observacoes_animal" required><?php echo $resultado['observacoes'];?></textarea>
 				</div>
 				<div class="form-row">
@@ -232,7 +233,7 @@
 					$dados_recuperados = mysqli_query($con, $SQL);
 							if($dados_recuperados){
 								if(mysqli_num_rows($dados_recuperados) > 0){
-									echo "<label id='label_ant'>Tratamentos (Antigos)</label>";
+									echo "<label id='label_ant'>*Tratamentos (Antigos)</label>";
 									while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
 										$i = $_SESSION['i'];
 										$id = $resultado['id_at'];
@@ -284,11 +285,11 @@
                 <div class="modal-body">
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>Data Tratamento </label><br>
+									<label>*Data Tratamento </label><br>
 									<input class="form-control" type="date" id="data_tratamento_nv" name="data_tratamento_nv" required />
 							</div>
 							<div class="form-group col-md-6">
-								<label>Tipo Tratamento </label><br>
+								<label>*Tipo Tratamento </label><br>
 								<select class="form-control" id="tratamento_nv" name="tratamento_nv">
 									<option value="" selected="selected">Selecione o Tratamento</option>
 									<?php
@@ -315,7 +316,7 @@
 									</div>
 								</div>
 									<div class="form-row">
-										<label>Observações </label><br>
+										<label>*Observações </label><br>
 										<textarea class="form-control" id="observacao_tratamento_nv" name="observacao_tratamento_nv" required></textarea>
 									</div><br><br>
 									
