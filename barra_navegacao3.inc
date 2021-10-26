@@ -13,7 +13,7 @@
 			</div>
 			<div class="column col-md-3">
 				<select name="perfil" onchange="location = this.value;" style="background-color: black; color: gold; border-radius: 5em; margin-top: 3.5em; font-weight: bold; height: 2em; text-align: center;">
-					<option selected hidden >Perfil</option>
+					<option selected hidden >Seu Perfil</option>
 					<option value="perfil_adm.php">Perfil ADM (Seus Dados)</option>
 					<option value="lista_usuarios.php">Edição de Usuários</option>
 					<option value="lista_animais_adm.php">Edição de Animais</option>
