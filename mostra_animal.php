@@ -24,10 +24,10 @@
 			include('barra_navegacao2.inc');
 		?>
         <nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Animal Selecionado</h5>
+			<h5 style="font-weight: bold;">Animal Selecionado</h5>
 		</nav>
 		
-		<br><h5 style="margin-left: 2em;">PARABÉNS!! Parece que se interessou por este animalzinho! Para adotá-lo, entre em contato com o número do publicante fornecido abaixo! </h5>
+		<br><h5 style="margin-left: 2em; font-weight: bold;">PARABÉNS!! Parece que se interessou por este animalzinho! Para adotá-lo, entre em contato com o número do publicante fornecido abaixo! </h5>
 <?php
     include ("cabecalho_conexao.php");
 
@@ -77,7 +77,7 @@ width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
 							<h5 style="color: gold;"><b>Sobre o Publicante</b></h5>
 							<p class="card-text"><b>Pessoa que publicou:</b> '.$resultado["nome_usuario"].' </p>
 							<p class="card-text"><b>Telefone:</b> '.$resultado["telefone"].' </p>
-							<p class="card-text"><b>Cidade:</b> '.$resultado["cidade"].', Bairro: '.$resultado["bairro"].' </p>
+							<p class="card-text"><b>Cidade:</b> '.$resultado["cidade"].', <b>Bairro:</b> '.$resultado["bairro"].' </p>
 							<h5 style="color: gold;"><b>Observações do Publicante sobre o Animal</b></h5>
 							<p class="card-text" align="justify">'.$resultado["observacoes"].' </p>
 							';
@@ -116,9 +116,9 @@ width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
    echo '
    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content" style="width: 100%;">
 		  <div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Que Legal! Mas antes, pense sobre as reflexões!			<small class="form-text text-muted">Quando estiver pronto, é só clicar "Entendi" na parte inferior da tela!</small></h5>
+			<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Que Legal! Mas antes, pense sobre as reflexões!			<small class="form-text text-muted"><b style="color: red;">Quando estiver pronto, é só clicar "Entendi" na parte inferior da tela!</b></small></h5>
 			<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
 			  <span aria-hidden="true">&times;</span>
 			</button>
@@ -134,35 +134,40 @@ width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
 			  </ol>
 			  <div class="carousel-inner">
 				<div class="carousel-item active">
-				  <img class="d-block w-100" src="img/1.png" alt="Primeiro Slide" style="width: 50em; height: 20em;">
+				  <img class="d-block w-100" src="img/1.png" alt="Primeiro Slide" style="width: 40em; height: 20em;">
 				  <div class="carousel-caption d-none d-md-block">
-						<h5>Você terá mesmo o tempo necessário para cuidar?</h5>
+						<h5 style="font-weight: bold; text-shadow: 
+               2px 2px 2px black;">Você terá mesmo o tempo necessário para cuidar?</h5>
 				  </div>
 				</div>
 				<div class="carousel-item">
-				  <img class="d-block w-100" src="img/4.png" alt="Segundo Slide" style="width: 50em; height: 20em;">
+				  <img class="d-block w-100" src="img/4.png" alt="Segundo Slide" style="width: 40em; height: 20em;">
 				  <div class="carousel-caption d-none d-md-block">
-						<h5>O lugar é adequado e seguro?</h5>
+						<h5 style="font-weight: bold;  text-shadow: 
+               2px 2px 2px black;">O lugar é adequado e seguro?</h5>
 				  </div>
 				</div>
 				<div class="carousel-item">
-				  <img class="d-block w-100" src="img/2.png" alt="Terceiro Slide" style="width: 50em; height: 20em;">
+				  <img class="d-block w-100" src="img/2.png" alt="Terceiro Slide" style="width: 40em; height: 20em;">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>As suas condições financeiras coincidem para o bom cuidado?</h5>
+						<h5 style="font-weight: bold;  text-shadow: 
+               2px 2px 2px black;">As suas condições financeiras coincidem para o bom cuidado?</h5>
 					</div>
 				</div>
 				<div class="carousel-item">
-				  <img class="d-block w-100" src="img/3.png" alt="Terceiro Slide" style="width: 50em; height: 20em;">
+				  <img class="d-block w-100" src="img/3.png" alt="Terceiro Slide" style="width: 40em; height: 20em;">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>Você é maior de Idade?</h5>
-						<p>Caso não seja o correto é conversar com seus pais, pois eles saberão o que fazer</p>
+						<h5 style="font-weight: bold; text-shadow: 
+               2px 2px 2px black;">Você é maior de Idade?</h5>
+						<p style="font-weight: bold; text-shadow: 
+               2px 2px 2px black;">Caso não seja o correto é conversar com seus pais, pois eles saberão o que fazer</p>
 				  </div>
 				</div>
 				<div class="carousel-item">
-				  <img class="d-block w-100" src="img/5.png" alt="Terceiro Slide" style="width: 50em; height: 20em;">
+				  <img class="d-block w-100" src="img/5.png" alt="Terceiro Slide" style="width: 40em; height: 20em;">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>Não desconsidere estas reflexões!!</h5>
-						<p>Elas são importantes para que haja uma adoção segura e plena.</p>
+						<h5 style="font-weight: bold; text-shadow: 
+               2px 2px 2px black;">Não desconsidere estas reflexões!!</h5>
 				  </div>
 				</div>
 			  </div>
@@ -177,7 +182,7 @@ width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
 			</div>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-primary" data-dismiss="modal">Entendi!</button>
+			<button type="button" class="btn btn-primary" data-dismiss="modal" style="font-weight: bold;">Entendi!</button>
 		  </div>
 		</div>
 	  </div>

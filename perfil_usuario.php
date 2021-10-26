@@ -24,7 +24,7 @@
 			include('barra_navegacao2.inc');
 		?>
         <nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Perfil Usuário</h5>
+			<h5 style="font-weight: bold;">Perfil Usuário</h5>
 		</nav>
 
         <?php
@@ -79,7 +79,7 @@
                         
                         <div class="col-md-7" style="border-radius: 3em; height: 20em; padding: 50px; margin-top: 50px; background-color: white; box-shadow: 2px 2px 2em #888;">    
                             <p><h5><b>Nome Completo: '.$resultado["nome_usuario"].' ('.$resultado["tipo"].')</b></h5></p>
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#modalEditarUsu">Editar</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#modalEditarUsu" style="font-weight: bold;">Editar</button>
                             </p>
                             <p><h5><b>Telefone:'.$resultado["telefone"].'</b></h5></p>
                             <p><h5><b>Cidade: '.$resultado["cidade"].', Bairro: '.$resultado["bairro"].'</b></h5></p>
@@ -104,62 +104,62 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header" style="background-color: gold;">
-                  <h5 class="modal-title" id="exampleModalLabel">Editar Informações</h5>
+                  <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Editar Informações</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
                     <form action="altera_usuario.php" method="POST" enctype="multipart/form-data">
-						<small class="form-text text-muted">Campos marcados com * são obrigatorios</small>
-						<small id="emailHelp2" class="form-text text-muted">Todos os dados, exceto senha, email e foto, são visiveis a outros usuários.</small><br>
+						<h5 style="font-weight: bold; color: red">!!! Campos marcados com * são obrigatorios</h5>
+						<h6 style="font-weight: bold;">Todos os dados, exceto senha, email e foto, são visiveis a outros usuários.</h6><br>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>*Nome Completo </label><br>
+									<label style="font-weight: bold;">*Nome Completo </label><br>
 									<input class="form-control" type="text" id="novo_nome" name="novo_nome" onfocusout="validaNomeAtt()" value="<?php echo $resultado['nome_usuario']; ?>" required />
 									<span id="erroNomeAtt" style="color: red;"></span>
 							</div>
 							<div class="form-group col-md-6">
-									<label for="inputPassword4">*Senha </label><br>
+									<label for="inputPassword4" style="font-weight: bold;">*Senha </label><br>
 									<input class="form-control" type="text" id="nova_senha_usuario"  name="nova_senha_usuario" onfocusout="validaSenhaAtt()" value="<?php echo $resultado['senha']; ?>" required />
 									<span id="erroSenhaAtt" style="color: red;"></span>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>*Telefone </label><br>
+									<label style="font-weight: bold;">*Telefone </label><br>
 									<input class="form-control" type="text" id="novo_telefone_usuario" name="novo_telefone_usuario" onfocusout="validaTelefoneAtt()" value="<?php echo $resultado['telefone']; ?>" required />
 									<span id="erroTelefoneAtt" style="color: red;"></span>
 							</div>
 							<div class="form-group col-md-6">
-									 <label>*E-mail</label><br>
+									 <label style="font-weight: bold;">*E-mail</label><br>
 									 <input class="form-control" type="text" id="novo_email_usuario" name="novo_email_usuario" onfocusout="validaEmailAtt()" value="<?php echo $resultado['email']; ?>" required />
 									<span id="erroEmailAtt" style="color: red;"></span>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>*Cidade </label><br>
+									<label style="font-weight: bold;">*Cidade </label><br>
 									<input class="form-control" type="text" id="nova_cidade_usuario" name="nova_cidade_usuario"  onfocusout="validaCidadeAtt()" value="<?php echo $resultado['cidade']; ?>" required /> 
 									<span id="erroCidadeAtt" style="color: red;"></span>
 							</div>
 							<div class="form-group col-md-6">
-									<label>*Bairro </label><br>
+									<label style="font-weight: bold;">*Bairro </label><br>
 									<input class="form-control" type="text" id="novo_bairro_usuario" name="novo_bairro_usuario" onfocusout="validaBairroAtt()" value="<?php echo $resultado['bairro']; ?>" required />
 									<span id="erroBairroAtt" style="color: red;"></span>
 							</div>
 						</div>
 						<div class="form-row">
 								<div class="form-group col-md-12">
-									<label>Foto </label><br>
+									<label style="font-weight: bold;">Foto </label><br>
 									<input class="form-control" type="file" id="nova_foto" name="nova_foto" />
 								</div>
 						</div>
 						</div>
 						
 						<div class="modal-footer">
-						  <button type="reset" class="btn btn-danger">Limpar</button>
-						  <button type="submit" class="btn btn-primary">Confirmar</button>
+						  <button type="reset" class="btn btn-danger" style="font-weight: bold;">Limpar</button>
+						  <button type="submit" class="btn btn-primary" style="font-weight: bold;">Confirmar</button>
 						</div>
                     </form>
               </div>

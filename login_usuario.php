@@ -25,7 +25,7 @@
 			include('barra_navegacao1.inc');
 		?>
         <nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Login de Usuário</h5>
+			<h5 style="font-weight: bold;">Login de Usuário</h5>
 		</nav>
 		<br/>
 			<div class="container">
@@ -49,7 +49,7 @@
 						</div>
 						<div class="form-group col-md-11">
 							<input type="text" class="form-control" name="email_usuario" placeholder="Seu e-mail" required />
-							<small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+							<h6 style="font-weight: bold;">Nunca vamos compartilhar seu email, com ninguém.</h6>
 						</div>
 					</div>
 					<div class="form-row">
@@ -61,8 +61,8 @@
 						</div>
 					</div><br>
 					<div class="form-group" align="right">
-						<input type="reset" class="btn btn-danger" value="Limpar" />
-						<input type="submit" value="Confirmar" class="btn btn-primary" />
+						<input type="reset" class="btn btn-danger" value="Limpar" style="font-weight: bold;"/>
+						<input type="submit" value="Confirmar" class="btn btn-primary" style="font-weight: bold;"/>
 					</div>
 			</form>
         </div><br>

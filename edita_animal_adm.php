@@ -37,7 +37,7 @@
 		?>
 		
 		<nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Editar Dados do Animal</h5>
+			<h5 style="font-weight: bold;">Editar Dados do Animal</h5>
 		</nav>
 		<br/>
 		<?php
@@ -52,15 +52,15 @@
 		?>
             <div class="conteiner">
 			<form action="processa_edita_ani_adm.php" method="POST" class="formCadastro" enctype="multipart/form-data" style="box-shadow: 2px 2px 2em #888; background-color: gold; margin: 2em 9em 2em 9em; border-radius: 5em; padding: 2em 5em 2em 5em;">
-				<small class="form-text text-muted">Campos marcados com * são obrigatorios</small><br>
+				<h5 style="font-weight: bold; color: red;">!!! Campos marcados com * são obrigatorios</h5><br>
 				<div class="form-row">
 						<div class="form-group col-md-4">
-							<label>*Nome </label>
+							<label style="font-weight: bold;">*Nome </label>
 							<input class="form-control" type="text" id="novo_nome_animal" name="novo_nome_animal" onfocusout="validaNomeAnimalAtt()" value="<?php echo $resultado['nome_animal'];?>" required />
 							<span id="erroNomeAnimal" style="color: red;"></span>
 						</div>
 						<div class="form-group col-md-4">
-							<label>*Espécie </label>&emsp;&emsp;
+							<label style="font-weight: bold;">*Espécie </label>&emsp;&emsp;
 							<select class="form-control" name="nova_especie" required>
 							<?php
 								if($resultado['especie'] == 'Cachorro'){
@@ -78,19 +78,19 @@
 							</select>
 						</div>
 						<div class="form-group col-md-4">
-							<label>*Raça </label>
+							<label style="font-weight: bold;">*Raça </label>
 							<input class="form-control" type="text" id="nova_raca_animal" name="nova_raca_animal" onfocusout="validaRacaAnimalAtt()" value="<?php echo $resultado['raca'];?>" required />
 							<span id="erroRacaAtt" style="color: red;"></span>
 						</div>
 				</div>
 				<div class="form-row">
 						<div class="form-group col-md-6">
-							<label>*Cor </label>
+							<label style="font-weight: bold;">*Cor </label>
 							<input class="form-control" type="text" id="nova_cor_animal" name="nova_cor_animal" onfocusout="validaCorAnimalAtt()" value="<?php echo $resultado['cor'];?>" required />
 							<span id="erroCorAtt" style="color: red;"></span>
 						</div>
 						<div class="form-group col-md-6">
-							<label>*Porte </label>
+							<label style="font-weight: bold;">*Porte </label>
 							<select class="form-control" name="novo_porte_animal" id="novo_porte_animal" onfocusout="validaPorteAnimalAtt()" required>
 								<?php
 									if($resultado['porte'] == 'Mini'){
@@ -141,7 +141,7 @@
 				</div>
 				<div class="form-row">
 						<div class="form-group col-md-2">
-							<label>*Sexo </label><br>
+							<label style="font-weight: bold;">*Sexo </label><br>
 							<?php
 								if($resultado['sexo'] == 'Macho'){
 									echo '
@@ -157,7 +157,7 @@
 							?>
 						</div>
 						<div class="form-group col-md-6">
-							<label>*Idade </label>
+							<label style="font-weight: bold;">*Idade </label>
 							<select class="form-control" id="nova_idade_animal" name="nova_idade_animal" onfocusout="validaIdadeAnimalAtt()" required>
 								<?php
 									if($resultado['idade'] == 'Indefinida'){
@@ -206,7 +206,7 @@
 							<span id="erroIdadeAtt" style="color: red;"></span>
 							</div>
 								<div class="form-group col-md-4">
-								<label>*Status</label>
+								<label style="font-weight: bold;">*Status</label>
 								<select class="form-control" name="novo_status">
 										<option value="" selected hidden>Status Atual</option>
 										<option value="1">Adotado</option>
@@ -215,11 +215,11 @@
 							</div>
 				</div>
 				<div class="form-row">
-					<label>*Observações </label>
+					<label style="font-weight: bold;">*Observações </label>
 					<textarea class="form-control" id="nova_Observacoes_animal" name="nova_Observacoes_animal" required><?php echo $resultado['observacoes'];?></textarea>
 				</div>
 				<div class="form-row">
-					<label>Foto</label>
+					<label style="font-weight: bold;">Foto</label>
 					<input class="form-control" type="file" id="nova_foto_animal" name="nova_foto_animal" /></br>
 				</div>
 
@@ -233,7 +233,7 @@
 					$dados_recuperados = mysqli_query($con, $SQL);
 							if($dados_recuperados){
 								if(mysqli_num_rows($dados_recuperados) > 0){
-									echo "<label id='label_ant'>*Tratamentos (Antigos)</label>";
+									echo "<label id='label_ant' style='font-weight: bold;'>*Tratamentos (Antigos)</label>";
 									while(($resultado = mysqli_fetch_assoc($dados_recuperados)) != null){
 										$i = $_SESSION['i'];
 										$id = $resultado['id_at'];
@@ -247,7 +247,7 @@
 												Tipo: <input type='text' name='tratamento_inp".$i."' value='$nome - $cat' disabled />
 												Data: <input type='date' name='tratamento_data".$i."' value='$data' />
 												Observações: <input type='text' name='tratamento_obs".$i."' value='$obs' />
-												<button type='button' id='remover_ant".$i."' class='btn btn-danger' value='".$i."' onclick='remover_linha_ant(this);'>Remover</button>
+												<button type='button' id='remover_ant".$i."' class='btn btn-danger' value='".$i."' onclick='remover_linha_ant(this);' style='font-weight: bold;'>Remover</button>
 											</p>
 											<input type='hidden' id='escondido_ant".$i."' name='hidden_ant".$i."' value='0' />
 										";
@@ -257,13 +257,13 @@
 							}
 				?>
 						<p>
-							<label style="display: none" id="label_nv">Tratamentos (Novos)</label><br>
+							<label style="display: none; font-weight: bold;" id="label_nv">Tratamentos (Novos)</label><br>
 							<div id="tratamento_input_nv"></div>
 						</p>
 				<br><br><div class="form-group" align="right">
-					<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalAdicionarNvTratamento">Adicionar Tratamento</button>
-					<input type="reset" class="btn btn-danger" value="Limpar" />
-					<input type="submit" value="Confirmar" class="btn btn-primary" />
+					<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalAdicionarNvTratamento" style="font-weight: bold;">Adicionar Tratamento</button>
+					<input type="reset" class="btn btn-danger" value="Limpar" style="font-weight: bold;"/>
+					<input type="submit" value="Confirmar" class="btn btn-primary" style="font-weight: bold;"/>
 				</div>
 			</form>
 		</div><br>
@@ -277,7 +277,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header" style="background-color: gold;">
-                  <h5 class="modal-title" id="exampleModalLabel">Adicionar Tratamento</h5>
+                  <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Adicionar Tratamento</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -285,13 +285,13 @@
                 <div class="modal-body">
 						<div class="form-row">
 							<div class="form-group col-md-6">
-									<label>*Data Tratamento </label><br>
+									<label style="font-weight: bold;">*Data Tratamento </label><br>
 									<input class="form-control" type="date" id="data_tratamento_nv" name="data_tratamento_nv" required />
 							</div>
 							<div class="form-group col-md-6">
-								<label>*Tipo Tratamento </label><br>
+								<label style="font-weight: bold;">*Tipo Tratamento </label><br>
 								<select class="form-control" id="tratamento_nv" name="tratamento_nv">
-									<option value="" selected="selected">Selecione o Tratamento</option>
+									<option value="" selected="selected" hidden>Selecione o Tratamento</option>
 									<?php
 										include("cabecalho_conexao.php");
 										$SQL = "SELECT * FROM tipo_tratamento";
@@ -316,12 +316,12 @@
 									</div>
 								</div>
 									<div class="form-row">
-										<label>*Observações </label><br>
+										<label style="font-weight: bold;">*Observações </label><br>
 										<textarea class="form-control" id="observacao_tratamento_nv" name="observacao_tratamento_nv" required></textarea>
 									</div><br><br>
 									
 									<div class="form-group" align="right">
-									 <button type="button" class="btn btn-primary" id="adicionar_nv_adm">+ Adicionar</button>
+									 <button type="button" class="btn btn-primary" id="adicionar_nv_adm" style="font-weight: bold;">+ Adicionar</button>
 									</div>
 							</div>
 					</div>

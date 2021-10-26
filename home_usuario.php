@@ -24,7 +24,7 @@
 			include('barra_navegacao2.inc');
 		?>
         <nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Ultimos Adicionados...</h5>
+			<h5 style="font-weight: bold;">Ultimos Adicionados...</h5>
 		</nav>
 		
 		 <?php
@@ -58,7 +58,7 @@
 									  </p>
 									</div>
 									<div class='card-footer' align='center'>
-										<h4><a href='mostra_animal.php?animal=$resultado[id]' <button class='btn btn-primary'>QUERO ADOTAR!!</a></h4>
+										<h4><a href='mostra_animal.php?animal=$resultado[id]' <button class='btn btn-primary' style='font-weight: bold;'>QUERO ADOTAR!!</a></h4>
 									</div>
 									
 								</div></div>

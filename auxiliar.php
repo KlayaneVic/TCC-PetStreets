@@ -41,7 +41,7 @@
 										Tipo: <input type='text' name='tratamento_inp_".$i."' value='$nome - $categoria' disabled />
 										Data: <input type='date' name='tratamento_data_".$i."' value='$parametro2' disabled />
 										Observações: <input type='text' name='tratamento_obs_".$i."' value='$parametro3' disabled />
-										<button id='remover".$i."' class='btn btn-danger' value='".$i."' onclick='remover_linha(this);'>Remover</button>
+										<button id='remover".$i."' class='btn btn-danger' value='".$i."' onclick='remover_linha(this);' style='font-weight: bold;'>Remover</button>
 									</p><br id='br".$i."' class='br_trat'>
 										<input type='hidden' id='escondido_".$i."' name='hidden_".$i."' value='0' />
 									";

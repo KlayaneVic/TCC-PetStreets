@@ -148,9 +148,9 @@ function validaTelefone(){
         return false;
     }else{
         tel.style.background = "white";
-        document.getElementById("erroTelefone").innerHTML = "";
+	document.getElementById("erroTelefone").innerHTML = "";
     }
-    return true;
+     return true;
 }
 
 function validaTelefoneAtt(){

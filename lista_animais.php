@@ -26,14 +26,14 @@
 		?>
 		
 		<nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Suas Listas de Animais</h5>
+			<h5 style="font-weight: bold;">Suas Listas de Animais</h5>
 		</nav>
 		<br><br>
 		<?php
 			include('cabecalho_conexao.php');
 		?>
 		
-		<h5 align="center">Seus Animais Disponiveis para Adoção</h5>
+		<h5 align="center" style="font-weight: bold;">Seus Animais Disponiveis para Adoção</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
 				$SQL = "SELECT a.*, u.*
@@ -90,10 +90,10 @@
 										echo "<td style='padding: 1em;'>Idoso <br>(+ 9 Anos)</td>";
 									}
 								echo "<td style='padding: 1em;' align='justify'>" . $resultado['observacoes'] . "</td>";
-								echo"<td style='padding: 1em;'> <a href='edita_animal.php?animal=$resultado[id]' <button class='btn btn-primary'>Editar</button></a></td>";
+								echo"<td style='padding: 1em;'> <a href='edita_animal.php?animal=$resultado[id]' <button class='btn btn-primary' style='font-weight: bold;'>Editar</button></a></td>";
 								echo"<td style='padding: 1em;'> 
 				
-								<a href='modifica_status_animal.php?animal=$resultado[id]' onclick='return permissao_status_animal()'><button class='btn btn-primary'>Confirmar Adoção +</button></a></td>";
+								<a href='modifica_status_animal.php?animal=$resultado[id]' onclick='return permissao_status_animal()'><button class='btn btn-primary' style='font-weight: bold;'>Confirmar Adoção +</button></a></td>";
 							
 							echo "</tr>";
 							
@@ -102,7 +102,7 @@
 		
 						}else{
 							$texto = null;
-							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Animais Cadastrados ...</h6>";
+							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em; font-weight: bold;'>... Você não Possui Animais Cadastrados ...</h6>";
 						}
 					}
 						echo "</table></div>";
@@ -110,7 +110,7 @@
 			?>
 			<br><br><br>
 		
-		<h5 align="center">Seus Animais que Foram Adotados</h5>
+		<h5 align="center" style="font-weight: bold;">Seus Animais que Foram Adotados</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
 				$SQL = "SELECT a.*, u.*
@@ -166,18 +166,18 @@
 										echo "<td style='padding: 1em;'>Idoso <br>(+ 9 Anos)</td>";
 									}
 								echo "<td style='padding: 1em;' align='justify'>" . $resultado['observacoes'] . "</td>";
-								echo "<td style='padding: 1em; color: green;'> Animal Adotado ✔</td>";
+								echo "<td style='padding: 1em; color: green; font-weight: bold;'> Animal Adotado ✔</td>";
 								if ($resultado['permissao'] == 0){
-								echo "<td style='padding: 1em;'><a href='modifica_permissao_animal.php?animal=$resultado[id]' onclick='return permissao_divulga_animal()'><button class='btn btn-primary'>Permitir Divulgação</button></a></td>";
+								echo "<td style='padding: 1em;'><a href='modifica_permissao_animal.php?animal=$resultado[id]' onclick='return permissao_divulga_animal()'><button style='font-weight: bold;' class='btn btn-primary'>Permitir Divulgação</button></a></td>";
 								}else{
-									echo "<td style='padding: 1em; color: green;'> Animal Divulgado ✔</td>";
+									echo "<td style='padding: 1em; color: green; font-weight: bold;'> Animal Divulgado ✔</td>";
 								}
 							echo "</tr>
 							</tbody>";
 						} 
 						}else{
 							$texto = null;
-							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Animais que foram Adotados ...</h6>";
+							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em; font-weight: bold;'>... Você não Possui Animais que foram Adotados ...</h6>";
 						}
 					}
 					echo "</table></div>";

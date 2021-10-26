@@ -34,7 +34,7 @@
 		?>
 		
 		<nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Sobre o Site</h5>
+			<h5 style="font-weight: bold;">Sobre o Site</h5>
 		</nav>
 		
 		<br><h5 style="margin-left: 2em;">Afinal, do que se trata o PetStreets?</h5>

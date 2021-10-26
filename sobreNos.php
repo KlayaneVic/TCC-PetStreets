@@ -34,7 +34,7 @@
 		?>
 		
 		<nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Sobre Nós</h5>
+			<h5 style="font-weight: bold;">Sobre Nós</h5>
 		</nav>
 		<br>
 

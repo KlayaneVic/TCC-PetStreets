@@ -34,14 +34,14 @@
 		?>
 		
 		<nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Listas de Animais</h5>
+			<h5 style="font-weight: bold;">Listas de Animais</h5>
 		</nav>
 		<br><br>
 		<?php
 			include('cabecalho_conexao.php');
 		?>
 		
-		<h5 align="center">Animais Não/Adotados Disponiveis no Banco</h5>
+		<h5 align="center" style="font-weight: bold;">Animais Não/Adotados Disponiveis no Banco</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
 				$SQL = "SELECT a.*, u.*
@@ -101,21 +101,21 @@
 									}
 								echo "<td style='padding: 1em;' align='justify'>" . $resultado['observacoes'] . "</td>";
 								if ($resultado['status'] == 0){
-									echo "<td style='padding: 1em; color: red;'> Não Adotado <b>X</b></td>";
+									echo "<td style='padding: 1em; color: red; font-weight: bold;'> Não Adotado <b>X</b></td>";
 								}else{
-									echo "<td style='padding: 1em; color: green;'>Adotado ✔</td>
+									echo "<td style='padding: 1em; color: green; font-weight: bold;'>Adotado ✔</td>
 									";
 									
 								}
 								if (($resultado['permissao'] == 0) && ($resultado['status'] == 0)){
-										echo "<td style='padding: 1em; color: red;'>Não Divulgado <b>X</b></td>";
+										echo "<td style='padding: 1em; color: red; font-weight: bold;'>Não Divulgado <b>X</b></td>";
 								}elseif ($resultado['permissao'] == 0){
-									echo "<td style='padding: 1em;'><a href='permissao_divulga_adm.php?animal=$resultado[id]' onclick='return permissao_divulga_adm()'><button class='btn btn-primary'>Permitir Divulgação</button></a></td>";
+									echo "<td style='padding: 1em;'><a href='permissao_divulga_adm.php?animal=$resultado[id]' onclick='return permissao_divulga_adm()'><button class='btn btn-primary' style='font-weight: bold;'>Permitir Divulgação</button></a></td>";
 								}else{
-									echo "<td style='padding: 1em;'><a href='permissao_remove_adm.php?animal=$resultado[id]' onclick='return permissao_remove_adm()'><button class='btn btn-danger'>Remover Divulgação</button></a></td>";
+									echo "<td style='padding: 1em;'><a href='permissao_remove_adm.php?animal=$resultado[id]' onclick='return permissao_remove_adm()'><button class='btn btn-danger' style='font-weight: bold;'>Remover Divulgação</button></a></td>";
 								}
-								echo"<td style='padding: 1em;'> <a href='exclui_animal.php?animal=$resultado[id]' onclick='return permissao_exclui_animal()'><button class='btn btn-danger'>Excluir</button></a><br><br>
-								<a href='edita_animal_adm.php?animal=$resultado[id]'> <button class='btn btn-primary'>Editar</button></a></td>";
+								echo"<td style='padding: 1em;'> <a href='exclui_animal.php?animal=$resultado[id]' onclick='return permissao_exclui_animal()'><button class='btn btn-danger' style='font-weight: bold;'>Excluir</button></a><br><br>
+								<a href='edita_animal_adm.php?animal=$resultado[id]'> <button class='btn btn-primary' style='font-weight: bold;'>Editar</button></a></td>";
 							echo "</tr>";
 							
 						}
@@ -123,7 +123,7 @@
 		
 						}else{
 							$texto = null;
-							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Animais Cadastrados ...</h6>";
+							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em; font-weight: bold;'>... Não Possui Animais Cadastrados ...</h6>";
 						}
 					}
 						echo "</table></div>";

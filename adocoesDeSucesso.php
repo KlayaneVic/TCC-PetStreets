@@ -34,7 +34,7 @@
 		?>
 		
         <nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Adoções de Sucesso</h5>
+			<h5 style="font-weight: bold;">Adoções de Sucesso</h5>
 		</nav>
 		
 		<?php
@@ -71,7 +71,7 @@
 						   }
                         }else{
 							echo '
-								<br><br><h6 align="center" style="border-radius: 5em; background-color: gold; padding: 1em 27em 1em 27em; margin-left: 5em; margin-right: 5em; margin-bottom: 15em;">Ainda não há descrição recebida!!.</h6><br><br>		
+								<br><br><h5 align="center" style="font-weight: bold; border-radius: 5em; background-color: gold; padding: 1em 27em 1em 27em; width: 100%; margin-bottom: 15em;">Ainda não há descrição recebida!!.</h5><br><br>		
 							';
 						}
                     }

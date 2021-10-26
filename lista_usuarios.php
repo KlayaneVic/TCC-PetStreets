@@ -26,14 +26,14 @@
 		?>
 		
 		<nav class="nav2" style="background-color: gold; color: black;">
-			<h5>Listas de Usuários</h5>
+			<h5 style="font-weight: bold;">Listas de Usuários</h5>
 		</nav>
 		<br><br>
 		<?php
 			include('cabecalho_conexao.php');
 		?>
 		
-		<h5 align="center">Usuários Cadastrados no Banco</h5>
+		<h5 align="center" style="font-weight: bold;">Usuários Cadastrados no Banco</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
 				$SQL = 'SELECT * FROM usuario';
@@ -89,8 +89,8 @@
 									echo "<td style='padding: 1em;'>" . $resultado['telefone'] . "</td>";
 									echo "<td style='padding: 1em;'>" . $resultado['cidade'] . "</td>";
 									echo "<td style='padding: 1em;'>" . $resultado['bairro'] . "</td>";
-									echo"<td style='padding: 1em;'><a href='excluir_usuario.php?usuario=$resultado[id_usuario]' <button class='btn btn-danger' onclick=' return permissao_excluir_usuario()'>Excluir</button></a><br><br>
-									<a href='edita_usuario.php?usuario=$resultado[id_usuario]' <button class='btn btn-primary'>Editar</button></a></td>";
+									echo"<td style='padding: 1em;'><a href='excluir_usuario.php?usuario=$resultado[id_usuario]' <button class='btn btn-danger' style='font-weight: bold;' onclick=' return permissao_excluir_usuario()'>Excluir</button></a><br><br>
+									<a href='edita_usuario.php?usuario=$resultado[id_usuario]' <button class='btn btn-primary' style='font-weight: bold;'>Editar</button></a></td>";
 								}else{
 									echo "
 										<td style='padding: 1em;'> --- </td>
@@ -105,7 +105,7 @@
 		
 						}else{
 							$texto = null;
-							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em;'>... Você não Possui Usuários Cadastrados ...</h6>";
+							echo "<h6 align='center' style='border-radius: 5em; background-color: gold; padding: 1em; margin-left: 5em; margin-right: 5em; font-weight: bold;'>... Não Possui Usuários Cadastrados ...</h6>";
 						}
 					}
 						echo "</table></div>";			

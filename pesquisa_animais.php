@@ -30,11 +30,11 @@
 		
 			<form action="processa_pesquisa_animais.php" method="POST" style="background-color: gold; border-radius: 5em; box-shadow: 2px 2px 2em #888; 
 			margin: 2em 9em 2em 9em; padding: 2em 5em 2em 5em;">
-			<small class="form-text text-muted">Possiveis Buscas: Espécie, Raça, Cor, Porte, Sexo, Idade, Cidade, Bairro. <br> Obs: Se clicar no botão
-				para procurar sem ter selecionado algum campo o sistema ira procurar por todos os animais possiveis para adoção no banco.</small><br>
+			<h6>Possiveis Buscas: Espécie, Raça, Cor, Porte, Sexo, Idade, Cidade, Bairro. <br><br> Obs: Se clicar no botão
+				para procurar sem ter selecionado algum campo o sistema ira procurar por todos os animais possiveis para adoção no banco.</h6><br>
 				<div class="form-row">
 						<div class="form-group col-md-4">
-							<label>Idade </label>
+							<label style="font-weight: bold;">Idade </label>
 							<select class="form-control" id="idade" name="idade">
 								<option value="" selected hidden >---</option>
 								<option value="Indefinida">Idade Indefinida</option>
@@ -45,7 +45,7 @@
 							</select>
 						</div>	
 						<div class="form-group col-md-4">
-							<label>Espécie </label>&emsp;&emsp;<br>
+							<label style="font-weight: bold;">Espécie </label>&emsp;&emsp;<br>
 										<select class="form-control" name="especie" >
 											<option value="" selected hidden >---</option>
 											<option value="Gato">Gato</option>
@@ -53,7 +53,7 @@
 										</select>
 						</div>
 						<div class="form-group col-md-4">
-							<label>Porte </label>
+							<label style="font-weight: bold;">Porte </label>
 								<select class="form-control" name="porte" id="porte">
 									<option value="" selected hidden >---</option>
 									<option value="Mini">Mini/Toy</option>
@@ -66,33 +66,33 @@
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-6">
-						<label>Cidade </label>
+						<label style="font-weight: bold;">Cidade </label>
 						<input class="form-control" type="text" id="cidade" name="cidade" style="text-transform: capitalize;" placeholder="Cidade"/>
 					</div>
 					<div class="form-group col-md-6">
-						<label>Bairro </label>
+						<label style="font-weight: bold;">Bairro </label>
 						<input class="form-control" type="text" id="bairro" name="bairro" style="text-transform: capitalize;" placeholder="Bairro"/>
 					</div>
 				</div>
 				<div class="form-row">
 						<div class="form-group col-md-2">
-							<label>Sexo </label><br>
+							<label style="font-weight: bold;">Sexo </label><br>
 								<input type="radio" hidden id="sexo" name="sexo" value="" checked />
 								<input type="radio" id="sexo" name="sexo" value="Fêmea" />Fêmea&ensp;
 								<input type="radio" id="sexo" name="sexo" value="Macho" />Macho
 						</div>
 						<div class="form-group col-md-6">
-							<label>Raça </label>
+							<label style="font-weight: bold;">Raça </label>
 								<input class="form-control" type="text" id="raca" name="raca" style="text-transform: capitalize;" placeholder="Raça"/>
 						</div>
 						<div class="form-group col-md-4">
-							<label>Cor </label>
+							<label style="font-weight: bold;">Cor </label>
 								<input class="form-control" type="text" id="cor" name="cor" style="text-transform: capitalize;" placeholder="Cor"/>
 						</div>
 				</div>
 				<br><div align="right">
-					<input type="reset" class="btn btn-danger" value="Limpar" />
-					<input type="submit" value="Procurar" class="btn btn-primary" />
+					<input type="reset" class="btn btn-danger" value="Limpar" style="font-weight: bold;"/>
+					<input type="submit" value="Procurar" class="btn btn-primary" style="font-weight: bold;"/>
 				</div>
 			</form>
 			<br>

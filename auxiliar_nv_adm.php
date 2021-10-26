@@ -41,7 +41,7 @@
 										Tipo: <input type='text' name='tratamento_inp_nv".$j."' value='$nome - $categoria' disabled />
 										Data: <input type='date' name='tratamento_data_nv".$j."' value='$parametro2' disabled />
 										Observações: <input type='text' name='tratamento_obs_nv".$j."' value='$parametro3' disabled />
-										<button id='remover_nv".$j."' class='btn btn-danger' value='".$j."' onclick='remover_linha_nv(this);'>Remover</button>
+										<button id='remover_nv".$j."' class='btn btn-danger' value='".$j."' onclick='remover_linha_nv(this);' style='font-weight: bold;'>Remover</button>
 									</p>
 										<input type='hidden' id='escondido_nv".$j."' name='hidden_nv".$j."' value='0' />
 									";
