@@ -25,6 +25,7 @@
 		?>
         <nav class="nav2" style="background-color: gold; color: black;">
 			<h5 style="font-weight: bold;">Ultimos Adicionados...</h5>
+			<!-- AVISO: Letras maiúsculas no começo de frase é critério do usuário -->
 		</nav>
 		
 		 <?php
@@ -38,7 +39,7 @@
 						FROM animal a
 							INNER JOIN usuario u 
 								ON a.usuario_cadastro = u.id_usuario and a.status = 0 ORDER BY id DESC LIMIT 8";
-
+			
             $dados_recuperados = mysqli_query($con, $SQL);
 			$resultado =  null;
 					

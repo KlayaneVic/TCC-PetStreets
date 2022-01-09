@@ -44,7 +44,7 @@
 		?>
             <div class="conteiner">
 			<form action="processa_edita_ani.php" method="POST" class="formCadastro" enctype="multipart/form-data" style="box-shadow: 2px 2px 2em #888; background-color: gold; margin: 2em 9em 2em 9em; border-radius: 5em; padding: 2em 5em 2em 5em;">
-				<h5 style="font-weight: bold; color: red;">!!! Campos marcados com * são obrigatorios</h5><br>
+				<h5 style="font-weight: bold; color: red;">!!! Campos marcados com * são obrigatórios</h5><br>
 				<div class="form-row">
 						<div class="form-group col-md-4">
 							<label style="font-weight: bold;">*Nome </label>

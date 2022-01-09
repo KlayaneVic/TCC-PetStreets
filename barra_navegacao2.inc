@@ -14,7 +14,7 @@
 			<div class="column col-md-3">
 				<select name="perfil" onchange="location = this.value;" style="background-color: black; color: gold; border-radius: 2em; margin-top: 3.5em; font-weight: bold; height: 2em; text-align: center;">
 					<option selected hidden >Seu Perfil</option>
-					<option value="home_usuario.php">Pagina Inicial</option>
+					<option value="home_usuario.php">Página Inicial</option>
 					<option value="perfil_usuario.php">Usuário (Seus Dados)</option>
 					<option value="cadastro_animais.php">Cadastrar Animais</option>
 					<option value="lista_animais.php">Sua Lista de Animais</option>

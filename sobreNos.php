@@ -43,8 +43,8 @@
 		<div class="container" align="justify">
 			<div class="row" >
 				<div class="col-md-8">
-					<p> Somos um grupo de estudante cerca de <b>20 anos</b>,  fazemos <b>técnico em informática junto ao ensino médio</b> e <b>este site está sendo criado para que no nosso quarto ano (ultimo ano) possamos apresentá-lo como TCC quando formos nos formar</b>.
-						Relatando um pouco sobre nosso cotidiano em informática, aprendemos <b>linguagens de programação</b>, bibliotecas de estilização em programas especificos para a criação de sites (php, html, CSS, Jquery, Bootstrap, etc...), como algumas que estão sendo utilizadas neste site.
+					<p> Somos um grupo de estudante cerca de <b>20 anos</b>,  fazemos <b>técnico em informática integrado ao ensino médio</b> e <b>este site foi desenvolvido para que no nosso quarto ano (último ano) possamos apresentá-lo como trabalho de conclusão de curso (TCC) quando formos nos formar</b>.
+						Relatando um pouco sobre nosso cotidiano em informática, aprendemos <b>linguagens de programação</b>, bibliotecas de estilização em programas específicos para a criação de sites (php, html, CSS, Jquery, Bootstrap, etc...), como algumas que estão sendo utilizadas neste site.
 					</p>
 
 					<h5>Trabalhos Recentes</h5>
@@ -53,7 +53,7 @@
 						<img src="img/trabalho_anterior.jpg" style="border-radius: 10px; height: 10em; width: 22.7em;">
 						<img src="img/trabalho_anterior2.jpg" style="border-radius: 10px; height: 10em; width: 22.6em;">
 					</div><br>
-					<p><b>Nos ajude para formar a pagina de adoções de sucesso!! Confirme o botão 'Permitir Divulgação' em sua lista de animais e faça parte do mural!!</b>
+					<p><b>Nos ajude para formar a página de adoções de sucesso!! Confirme o botão 'Permitir Divulgação' em sua lista de animais e faça parte do mural!!</b>
 					</p>
 				</div>
 
@@ -65,8 +65,8 @@
 						<span>Informações:</span><br>
 							<p>
 								Contato: Admnistrador<br>
-								email: adote@bolinha.com <br>
-								Local: Fazenda da Manga - SP <br>
+								e-mail: adote@petstreets.com <br>
+								Local: Araraquara - SP <br>
 								telefone: (011) 12365-4789
 							</p>	  
 					</div>

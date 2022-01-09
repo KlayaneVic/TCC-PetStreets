@@ -27,8 +27,8 @@
 			<div class="container">
 				<form action="processa_cad_usu.php" method="POST" class="formCadastro" enctype="multipart/form-data" 
 				style="background-color: gold; border-radius: 5em; box-shadow: 2px 2px 2em #888; margin: 2em 4em 2em 4em; padding: 2em 6em 1em 6em;">
-						<h5 style="color: red; font-weight: bold;">!!! Campos marcados com * são obrigatorios</h5>
-						<h6 style="font-weight: bold;">Todos os dados, exceto senha, email e foto, serão visiveis a outros usuários.</h6><br>
+						<h5 style="color: red; font-weight: bold;">!!! Campos marcados com * são obrigatórios</h5>
+						<h6 style="font-weight: bold;">Todos os dados, exceto senha, email e foto, serão visíveis a outros usuários.</h6><br>
 						<div class="form-row">
 								<div class="form-group col-md-8">
 									<label style="font-weight: bold;">*Nome Completo</label><br>

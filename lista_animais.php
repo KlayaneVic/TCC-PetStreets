@@ -33,7 +33,7 @@
 			include('cabecalho_conexao.php');
 		?>
 		
-		<h5 align="center" style="font-weight: bold;">Seus Animais Disponiveis para Adoção</h5>
+		<h5 align="center" style="font-weight: bold;">Seus Animais Disponíveis para Adoção</h5>
 			<?php
 				$id_usuario = $_SESSION["id_usuario"];
 				$SQL = "SELECT a.*, u.*

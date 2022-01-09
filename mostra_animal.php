@@ -118,7 +118,7 @@ width: 80%; box-shadow: 2px 2px 2em #888; border: none; padding: 1em;">
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content" style="width: 100%;">
 		  <div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Que Legal! Mas antes, pense sobre as reflexões!			<small class="form-text text-muted"><b style="color: red;">Quando estiver pronto, é só clicar "Entendi" na parte inferior da tela!</b></small></h5>
+			<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold;">Que Legal! Mas antes, reflita!!!			<small class="form-text text-muted"><b style="color: red;">Quando estiver pronto, é só clicar "Entendi" na parte inferior da tela!</b></small></h5>
 			<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
 			  <span aria-hidden="true">&times;</span>
 			</button>

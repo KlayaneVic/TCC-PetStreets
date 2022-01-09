@@ -38,33 +38,33 @@
         </nav>
         <br/>
 		<h5 style="margin-left: 2em;">Cadastro (Usuário é Inexistente na Plataforma):</h5>
-		<p align="justify" style="margin-left: 10em; margin-right: 10em;">Para fazer seu cadastro é simples... Vá até o <b>canto superior direito da tela</b> e clique no botão de cadastro. Aperecerá um formulário, nele você deve informar seus dados assim como o seu tipo de usuário, depois que digitar tudo corretamente, <b>clique em confirmar para ir para a próxima etapa</b>.</p>
+		<p align="justify" style="margin-left: 10em; margin-right: 10em;">Para fazer seu cadastro é simples... Vá até o <b>canto superior direito da tela</b> e clique no botão de cadastro. Aparecerá um formulário, nele você deve informar seus dados assim como o seu tipo de usuário, depois que digitar tudo corretamente, <b>clique em confirmar para ir para a próxima etapa</b>.</p>
 		
 		<h5 style="margin-left: 2em;">Login (Usuário Existe na plataforma, mas ainda não acessou sua conta):</h5>
-		<p align="justify" style="margin-left: 10em; margin-right: 10em;"> Com seu <b>cadastro feito</b>, você já faz parte do nosso banco de usuários e poderá efetuar o login, <b>ao lado do botão de cadastrar</b>, com seu email e senha.<br>
+		<p align="justify" style="margin-left: 10em; margin-right: 10em;"> Com seu <b>cadastro feito</b>, você já faz parte do nosso banco de usuários e poderá efetuar o login, <b>ao lado do botão de cadastrar</b>, com seu e-mail e senha.<br>
 		</p>
 		<h5 style="margin-left: 2em;">Pós Login (Usuário Logado na Plataforma):</h5>
 		<p align="justify" style="margin-left: 10em; margin-right: 10em;"> Agora <b>você já pode navegar</b> à procura de um parceiro ou cadastrar um animalzinho. Em <b>seu canto superior direito</b> estarão todas as funções que você pode usar <b>(localizada ao lado contrário da logo, 'Perfil')</b>. Lá você encontrará:<br>
 		<ul style="margin-left: 10em; margin-right: 10em;" align="justify">
-				<li>A <b>pagina inicial</b>, referida como os ultimos cadastrados, ali estarão todos os ultimos animais adicionados na plataforma e você poderá visualiza-los já com seus respectivos dados.</li>
-				<li><b>Perfil de Usuário</b> - Nele estará todos os seus dados podendo ser alterados ou não, e sua quatidade de animais cadastrados e que foram adotados. </li> 
-				<li><b>Cadastro de Animais</b> - Pagina dirigida para o cadastro dos seus animais. Nesta seção você encontrará um formulário requerindo dados de seu animal e um botão para adicionar seus tratamentos, após o cadastro ele será listado junto com os demais animais cadastrados.<br>
-				**Ao cadastrar o animal será <b>possivel a adição</b> de tratamentos aplicados ao <b>animal referido</b> para que um futuro adotante saiba que este animal foi tratado previamente com a aplicação de vacina, castração ou não tenha sido tratado. Caso tenha aplicado algum tratamento neste animal, você pode adiciona-lo e caso não tenha feito nada apenas prossiga com o cadastro, pois mais a frente poderá adicionar tratamentos a ele. </li>
-				<li><b>Lista de Animais</b> - Pagina dirigida para a visualização e edição dos seus animais cadastrados, tanto quanto os seus animais que já foram adotados.<br>
-				**Você pode editar qualquer um de seus animais disponiveis para a adoção, mas os seus animais que já foram adotados não<br>
+				<li>A <b>página inicial</b>, referida como os últimos cadastrados, ali estarão todos os últimos animais adicionados na plataforma e você poderá visualizá-los já com seus respectivos dados.</li>
+				<li><b>Perfil de Usuário</b> - Nele estarão todos os seus dados podendo ser alterados ou não, e sua quantidade de animais cadastrados e que foram adotados. </li> 
+				<li><b>Cadastro de Animais</b> - Página dirigida para o cadastro dos seus animais. Nesta seção você encontrará um formulário requerindo dados de seu animal e um botão para adicionar seus tratamentos, após o cadastro ele será listado junto com os demais animais cadastrados.<br>
+				**Ao cadastrar o animal será <b>possível a adição</b> de tratamentos aplicados ao <b>animal referido</b> para que um futuro adotante saiba que este animal foi tratado previamente com a aplicação de vacina, castração ou não tenha sido tratado. Caso tenha aplicado algum tratamento neste animal, você pode adicioná-lo e caso não tenha feito nada apenas prossiga com o cadastro, pois mais a frente poderá adicionar tratamentos a ele. </li>
+				<li><b>Lista de Animais</b> - Página dirigida para a visualização e edição dos seus animais cadastrados, tanto quanto os seus animais que já foram adotados.<br>
+				**Você pode editar qualquer um de seus animais disponíveis para a adoção, mas os seus animais que já foram adotados não<br>
 				**Você pode confirmar que o seu animal foi adotado, porém caso confirme uma vez, não poderá remove-lo da lista de adotados<br>
 				**Ao confirmar que seu animal foi adotado, ele irá para a parte inferior da tela referida como "Seus animais que foram adotados"<br>
 				**IMPORTANTE: CONFIRMAR DIVULGAÇÃO DE UM ANIMAL SEU QUE JÁ FOI ADOTADO NÃO É OBRIGATÓRIO, apenas confirme a divulgação caso queira nos ajudar a montar a pagina de animais que foram adotados com sucesso!<br>
-				**Caso confirme a divulgação, não será possivel retirar</li>
-				<li><b>Pesquisa Filtrada</b> - Pagina dirigida para a pesquisa especifica do animal, ou seja, se você que que seja femea/macho ou que tenha a pelagem amarela, etc.</li>
+				**Caso confirme a divulgação, não será possível retirar</li>
+				<li><b>Pesquisa Filtrada</b> - Página dirigida para a pesquisa específica do animal, ou seja, se você que que seja femêa/macho ou que tenha a pelagem amarela, etc.</li>
 				<li>E claro, a <b>funcionalidade de sair</b> da sua conta.</li>
 			</ul>
 		<h5 style="margin-left: 2em;">Como funciona para adotar o animal?</h5>
-		<p align="justify" style="margin-left: 10em; margin-right: 10em;">Para adotar o animal é simples... Ao selecionar um animal para visualização clicando no botão "QUERO ADOTAR!", a pagina irá fornecer todos os dados do animal, assim como os dados de quem o publicou, você poderá visualizar o numero de contato deste publicante.
-		Caso se interesse pelo animal, entre em contato com o numero fornecido e combine com o publicante!</p>
+		<p align="justify" style="margin-left: 10em; margin-right: 10em;">Para adotar o animal é simples... Ao selecionar um animal para visualização clicando no botão "QUERO ADOTAR!", a página irá fornecer todos os dados do animal, assim como os dados de quem o publicou, você poderá visualizar o número de contato deste publicante.
+		Caso se interesse pelo animal, entre em contato com o número fornecido e combine com o publicante!</p>
 		
 		<p align="justify" style="margin-left: 10em; margin-right: 10em;">
-			Abaixo falamos um pouco sobre reflexões para a adoção, <b>verifique-as se estão de acordo</b>. Esperamos muito que sim, qualquer duvida entre em contato pelo nosso email e não desanime pois o final pode ser cheio de alegria.</p>
+			Abaixo falamos um pouco sobre reflexões para a adoção, <b>verifique-as se estão de acordo</b>. Esperamos muito que sim, qualquer dúvida entre em contato pelo nosso e-mail e não desanime, pois o final pode ser cheio de alegria.</p>
 		</p>
 		<h5 style="margin-left: 2em;">Algumas Reflexões antes da adoção:</h5><br/>
 		

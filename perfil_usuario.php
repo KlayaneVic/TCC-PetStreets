@@ -111,8 +111,8 @@
                 </div>
                 <div class="modal-body">
                     <form action="altera_usuario.php" method="POST" enctype="multipart/form-data">
-						<h5 style="font-weight: bold; color: red">!!! Campos marcados com * são obrigatorios</h5>
-						<h6 style="font-weight: bold;">Todos os dados, exceto senha, email e foto, são visiveis a outros usuários.</h6><br>
+						<h5 style="font-weight: bold; color: red">!!! Campos marcados com * são obrigatórios</h5>
+						<h6 style="font-weight: bold;">Todos os dados, exceto senha, e-mail e foto, são visiveis a outros usuários.</h6><br>
 						<div class="form-row">
 							<div class="form-group col-md-6">
 									<label style="font-weight: bold;">*Nome Completo </label><br>

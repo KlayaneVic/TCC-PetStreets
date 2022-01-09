@@ -30,8 +30,8 @@
 		
 			<form action="processa_pesquisa_animais.php" method="POST" style="background-color: gold; border-radius: 5em; box-shadow: 2px 2px 2em #888; 
 			margin: 2em 9em 2em 9em; padding: 2em 5em 2em 5em;">
-			<h6>Possiveis Buscas: Espécie, Raça, Cor, Porte, Sexo, Idade, Cidade, Bairro. <br><br> Obs: Se clicar no botão
-				para procurar sem ter selecionado algum campo o sistema ira procurar por todos os animais possiveis para adoção no banco.</h6><br>
+			<h6>Possíveis Buscas: Espécie, Raça, Cor, Porte, Sexo, Idade, Cidade, Bairro. <br><br> Obs: Se clicar no botão
+				para procurar sem ter selecionado algum campo o sistema irá procurar por todos os animais possíveis para adoção no banco.</h6><br>
 				<div class="form-row">
 						<div class="form-group col-md-4">
 							<label style="font-weight: bold;">Idade </label>

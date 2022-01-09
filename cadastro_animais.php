@@ -34,7 +34,7 @@
 		<div class="conteiner">
 			<form action="processa_cad_ani.php" id="form_animal" method="POST" class="formCadastro" enctype="multipart/form-data" 
 			style="background-color: gold; border-radius: 5em; box-shadow: 2px 2px 2em #888; margin: 2em 9em 2em 9em; padding: 2em 5em 2em 5em;">
-				<h5 style="font-weight: bold; color: red;">!!! Campos marcados com * são obrigatorios</h5><br>
+				<h5 style="font-weight: bold; color: red;">!!! Campos marcados com * são obrigatórios</h5><br>
 				<div class="form-row">
 						<div class="form-group col-md-6">
 								<label style="font-weight: bold;">*Nome </label><br>
